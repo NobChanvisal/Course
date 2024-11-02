@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9f</title>
+</head>
+<body>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            border: 1px solid slategray;
+            margin-bottom: 30px;
+        }
+        .item{
+            display: grid;
+            place-items: center;
+        }
+
+        .container-2{
+            display: grid;
+            gap: 10px;
+            border: 1px solid slategray;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: 100px 100px;
+            margin-bottom: 30px;
+            animation: inherit;
+        }
+        .item1{background-color: red;}
+        .item2{background-color: blue;}
+        .item3{background-color: lightblue;}
+        .item4{background-color: lightpink;}
+    </style>
+    <h2>Auto fill</h2>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">1</div>
+        <div class="item item3">1</div>
+        <div class="item item4">1</div>
+    </div>
+    <h2>Auto fit</h2>
+    <div class="container-2">
+        <div class="item item1">1</div>
+        <div class="item item2">1</div>
+        <div class="item item3">1</div>
+        <div class="item item4">1</div>
+    </div>
+</body>
+</html>

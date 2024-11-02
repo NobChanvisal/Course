@@ -1,0 +1,20 @@
+
+Robert
+I'm 19
+In pp
+
+
+
+printf(".........\n");
+.\n ប្រើសម្រាប់ចុះបន្ទាត់
+.printf() ប្រើសម្រាប់បញ្ជេញតម្លៃមកលើអេក្រង់
+
+1.HEADER FILE	
+	#include<stdio.h>
+2.MAIN FUCNTION  
+
+
+	int main(){
+	.........
+	printf();
+	}

@@ -1,0 +1,1 @@
+getchar();  // Consume the newline character left by the previous scanf

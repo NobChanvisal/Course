@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.video-card {
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+}
+.thumbnail {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.profile-img {
+  display: inline-block;
+  vertical-align: top;
+}
+.profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.contain {
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+  font-family: "Roboto", sans-serif;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  max-height: 44px;
+  color: black;
+}
+span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #606060;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1c</title>
+    <style>
+        button{
+            background-color: transparent;
+            padding: 10px 30px;
+            border: 1px solid black;
+        }
+        .active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">Hell Everyone welcome to cito computer</p>
+    <button class="add-button">Add</button>
+    <script>
+        const btn = document.querySelector(".add-button");
+        const text = document.querySelector(".text");
+        btn.addEventListener("click", () => {
+            text.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

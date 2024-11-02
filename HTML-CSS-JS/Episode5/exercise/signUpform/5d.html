@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5d</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input{
+            width: 150px;
+            padding: 10px 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+            border-radius: 5px;
+            border: 1px solid slategrey;
+            font-size: 15px;
+        }
+        .text-box-last{
+            margin-left: 5px;
+        }
+        .text-box-email{
+            width: 310px;
+            margin-top: 0;
+            display: block;
+        }
+        button{
+            margin-left: 30px;
+            width: 310px;
+            padding: 10px 5px;
+            background-color: rgb(0, 93, 174);
+            border-radius: 5px;
+            border: none;
+            color: white;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        button:hover{
+            transform: scale(1.04);
+        }
+    </style>
+    <input class="text-box-firt" type="text" placeholder="Firtname">
+    <input class="text-box-last" type="text" placeholder="Lastname">
+    <input class="text-box-email" type="email" placeholder="email">
+    <button class="signUp">Sign Up</button>
+    <script src="scrip.js"></script>
+</body>
+</html>
