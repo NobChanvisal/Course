@@ -1,0 +1,58 @@
+.BTN2/*Add to Cart*/ 
+{
+    width: 100px;
+    height: 35px;
+    background-color: yellow;
+    border: none;
+    color: black;
+    border-radius: 15px;
+}
+#BTN1/*Request now*/
+{
+    border: none;
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: black;
+}
+.BTN3{/*Sign Up*/
+    width: 100px;
+    height: 45px;
+    background-color: greenyellow;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.BTN4{/*Get Start*/
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+}
+.BTN5{/*Download*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #008cba;
+    color: grey;
+    border-radius: 5px;
+}
+.BTN6{/*Apply to website*/
+    width: 230px;
+    height: 40px;
+    border: none;
+    background-color: #008cba;
+    color: white;
+    border-radius: 20px;
+
+}
+.BTN7{/*Save*/
+    width: 75px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: #008cba;
+}

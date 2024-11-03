@@ -1,0 +1,22 @@
+.Add{
+    width: 115px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: gold;
+    border: none;
+    color: black;
+}
+.Buy{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color:chocolate;
+    border: none;
+
+}
+.p39{
+    color: green;
+}
+a{
+    color: darkcyan;
+}
