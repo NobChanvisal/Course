@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2b</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      table {
+        width: 50%;
+        border: 1px solid #d1d5db;
+        text-align: left;
+        border-collapse: collapse;
+        color: #4b5563;
+        margin: 20px;
+      }
+     th {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        background-color: lightblue;
+        color: #374151;
+      }
+      tr {
+        background-color: #ffffff;
+        border-bottom: 1px solid #d1d5db;
+      }
+      tr:nth-child(even) {
+        background-color: #f3f4f6;
+      }
+      th,
+      td {
+        padding: 0.75rem 1.5rem;
+      }
+      th{
+        font-weight: 600;
+        color: #1f2937;
+        white-space: nowrap;
+      }
+      .action-link {
+        color: #2563eb;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .action-link:hover {
+        text-decoration: underline;
+      }
+      td:nth-child(1){
+        font-weight: bold;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <table>
+          <tr>
+            <th scope="col">Product name</th>
+            <th scope="col">Color</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+          <tr>
+            <td>Apple MacBook Pro 17"</td>
+            <td>Silver</td>
+            <td>Laptop</td>
+            <td>$2999</td>
+            <td><a href="#" class="action-link">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Microsoft Surface Pro</td>
+            <td>White</td>
+            <td>Laptop PC</td>
+            <td>$1999</td>
+            <td><a href="#" class="action-link">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Magic Mouse 2</td>
+            <td>Black</td>
+            <td>Accessories</td>
+            <td>$99</td>
+            <td><a href="#" class="action-link">Edit</a></td>
+          </tr>
+      </table>
+  </body>
+</html>
