@@ -73,31 +73,35 @@ void view(){
         cout<< number[i]<< " ";
     }
 }
-void deletes(){
+void deletes() {
     int deNum;
-    int find = 0;
-    read();
-    fstream write("temp.txt",ios::app);
+    bool found = false; // Flag to check if the number is found
+    read(); // Assuming `read()` initializes the array `number` and its size `count`
 
-    cout<< "Enter number to delete : ";cin>>deNum;
-    for(int i = 0; i<count; i++){
-        if(number[i] != deNum){
-            write<<number[i]<< " ";
-            find = 0;
-        }
-        else{
-            find = 1;
+    fstream write("temp.txt", ios::out); // Open temp file in write mode
+    if (!write) {
+        cout << "Error opening temp.txt for writing." << endl;
+        return;
+    }
+
+    cout << "Enter number to delete: ";
+    cin >> deNum;
+
+    for (int i = 0; i < count; i++) {
+        if (number[i] != deNum) {
+            write << number[i] << " ";
+        } else {
+            found = true; // Mark that the number was found
         }
     }
     write.close();
-    
-    if(find == 0){
-        cout<< "number not found "<<endl;
-        remove("temp.txt");
-    }
-    else{
-        remove("6_delete.txt");
-        rename("temp.txt", "6_delete.txt");
-        cout<< "delete successfull"<<endl;
+
+    if (!found) {
+        cout << "Number not found." << endl;
+        remove("temp.txt"); // Remove temp file if no changes were made
+    } else {
+        remove("6_delete.txt"); // Delete the old file
+        rename("temp.txt", "6_delete.txt"); // Rename temp to the original file
+        cout << "Delete successful." << endl;
     }
 }

@@ -26,12 +26,12 @@ int main(){
 
     cout<< "Output of product data :"<<endl;
     cout<< "---------------------------"<<endl;
-    cout<<code <<endl;
-    cout<<name<<endl;
-    cout<<size<<endl;
-    cout<<color<<endl;
-    cout<<qty<<endl;
-    cout<<price<<endl;
+    cout<<"Code : "<<code <<endl;
+    cout<<"Name : "<<name<<endl;
+    cout<<"Size : "<<size<<endl;
+    cout<<"Color: "<<color<<endl;
+    cout<<"Qty  : "<<qty<<endl;
+    cout<<"Price: "<<price<<endl;
     getch();
     return 0;
 }

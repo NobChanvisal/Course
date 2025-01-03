@@ -11,7 +11,7 @@ int main(){
     if(number == 0){
         cout<<"This number is Zero ";
     }
-    if(number >= 0){
+    if(number > 0){
         cout<<"This number is positive";
     }
     getch();
