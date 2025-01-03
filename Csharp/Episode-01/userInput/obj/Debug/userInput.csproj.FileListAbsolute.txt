@@ -1,0 +1,7 @@
+D:\learn Code\Teaching\C#\Episode-01\userInput\bin\Debug\userInput.exe.config
+D:\learn Code\Teaching\C#\Episode-01\userInput\bin\Debug\userInput.exe
+D:\learn Code\Teaching\C#\Episode-01\userInput\bin\Debug\userInput.pdb
+D:\learn Code\Teaching\C#\Episode-01\userInput\obj\Debug\userInput.csproj.AssemblyReference.cache
+D:\learn Code\Teaching\C#\Episode-01\userInput\obj\Debug\userInput.csproj.CoreCompileInputs.cache
+D:\learn Code\Teaching\C#\Episode-01\userInput\obj\Debug\userInput.exe
+D:\learn Code\Teaching\C#\Episode-01\userInput\obj\Debug\userInput.pdb
