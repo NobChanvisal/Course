@@ -1,0 +1,7 @@
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\bin\Debug\Demo.exe.config
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\bin\Debug\Demo.exe
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\bin\Debug\Demo.pdb
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\obj\Debug\Demo.csproj.AssemblyReference.cache
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\obj\Debug\Demo.exe
+D:\learn Code\Teaching\Csharp\Episode-02\01-Condition\Demo\obj\Debug\Demo.pdb
