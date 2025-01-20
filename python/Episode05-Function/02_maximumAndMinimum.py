@@ -1,16 +1,18 @@
 def max(a,b):
     if a > b:
-        max = a;
+        max = a
     else:
-        max = b;
+        max = b
     print("Maximum : ",max)
 def min(a,b):
     if a > b:
-        min = b;
+        min = b
     else:
-        min = a;
+        min = a
     print("Minimum : ",min)
-    
+
+print("Find maximum and minimum")
+print("----------------------------")
 print("1.Find maximum")
 print("2.Find minimum")
 opt = int(input("enter option : "))

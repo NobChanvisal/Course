@@ -8,7 +8,8 @@ int main() {
     float gpa[50];
     int deleteid,search;
     int n = 0;
-    int opt;
+    int opt,find = 0;
+
 
     cout <<endl<< "Student Management System" << endl;
     cout << "----------------------------------------" << endl;
@@ -57,6 +58,7 @@ int main() {
             }
             break;
         case 3:
+            find = 0;
             cout <<endl<< "Enter the Id of the student to update: ";
             cin >> search;
             for (int i = 0; i < n; i++) {
@@ -68,8 +70,12 @@ int main() {
                     cout << "Enter new Gpa  : ";
                     cin >> gpa[i];
                     cout << "Student updated." << endl;
-                    break;
+                    find = 1;
                 }
+            }
+            if(find == 0){
+
+                cout<< "Student not found!!"<<endl;
             }
             break;
         case 4:
@@ -85,8 +91,12 @@ int main() {
                     }
                     n--;
                     cout << "Student deleted." << endl;
-                    break;
+                    find = 1;
                 }
+            }
+            if(find == 0){
+
+                cout<< "Student not found!!"<<endl;
             }
             break;
         case 5:
@@ -99,8 +109,12 @@ int main() {
                     cout<<setw(30)<<name[i];
                     cout<<setw(5)<<sex[i];
                     cout<<setw(10)<<gpa[i]<<endl;
-                    break;
+                    find = 1;
                 }
+            }
+            if(find == 0){
+
+                cout<< "Student not found!!"<<endl;
             }
             break;
         case 6:
