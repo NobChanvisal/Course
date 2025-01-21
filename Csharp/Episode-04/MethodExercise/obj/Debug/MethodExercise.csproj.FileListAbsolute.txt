@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\bin\Debug\MethodExercise.exe.config
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\bin\Debug\MethodExercise.exe
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\bin\Debug\MethodExercise.pdb
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\obj\Debug\MethodExercise.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\obj\Debug\MethodExercise.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\obj\Debug\MethodExercise.exe
+D:\learn Code\Course\Csharp\Episode-04\MethodExercise\obj\Debug\MethodExercise.pdb

@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodDemo\\",
+  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodExercise\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodDemo\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1132009B-83F4-43CD-BBE7-54ACA236300D}|MethodExercise.csproj|d:\\learn code\\course\\csharp\\episode-04\\methodexercise\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1132009B-83F4-43CD-BBE7-54ACA236300D}|MethodExercise.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,13 +24,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodDemo\\Program.cs",
+              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodExercise\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodDemo\\Program.cs",
+              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-04\\MethodExercise\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAWAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAywEQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T07:07:29.293Z",
+              "WhenOpened": "2025-01-21T04:38:17.164Z",
               "EditorCaption": ""
             }
           ]
