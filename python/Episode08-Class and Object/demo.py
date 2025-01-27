@@ -8,6 +8,7 @@ class Cars:
         
 
 # mycar = Cars("Tesla","Red",2025)
+# mycar1 = Cars("Toyota","Black",2024)
 name = input("Enter car name: ")
 color = input("Enter car color: ")
 years = int(input("Enter car model year: ")) 

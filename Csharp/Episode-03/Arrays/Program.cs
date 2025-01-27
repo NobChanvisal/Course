@@ -222,11 +222,13 @@ namespace Arrays
                         {
                             if (code[i] == searchcode)
                             {
-                                Console.WriteLine("Search data : ");
-                                Console.WriteLine("------------------");
-                                Console.WriteLine($"Code  = {code[i]}");
-                                Console.WriteLine($"Name  = {name[i]}");
-                                Console.WriteLine($"Price = {price[i]}");
+                                Console.WriteLine("enter new data : ");
+                                Console.Write("enter code  : ");
+                                code[i] = Convert.ToInt32(Console.ReadLine());
+                                Console.Write("enter name  : ");
+                                name[i] = Console.ReadLine();
+                                Console.Write("enter price : ");
+                                price[i] = Convert.ToDouble(Console.ReadLine());
                                 find = true;
                             }
                         }

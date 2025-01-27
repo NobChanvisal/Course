@@ -35,6 +35,7 @@ int main() {
     cout << "Welcome to C++ Minimart" << endl;
     cout << "---------------------------------" << endl;
     login();
+    getch();
     return 0;
 }
 void login() {
