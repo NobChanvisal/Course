@@ -34,19 +34,29 @@ class Products:
 # product = Products(111,"Coca", 3, 100)
 # product.view()
 
-count = int(input("Enter the number of products: "))
 product_list = []
-for i in range(count):
-    print(f"Product{i+1}:")
-    code = input("Enter product code: ")
-    name = input("Enter product name: ")
-    price = float(input("Enter product price: "))
-    qty = int(input("Enter product quantity: "))
-    product = Products(code, name, price, qty)
-    product_list.append(product)
-print("\nProduct Information:")
-for product in product_list:
-    product.view()
-
-
-    
+while True:
+    print("1.insert\t2.view\t3.delete")
+    opt = int(input("enter option : "))
+    if opt == 1:
+        count = int(input("Enter the number of products: "))
+        for i in range(count):
+            print(f"Product{i+1}:")
+            code = input("Enter product code: ")
+            name = input("Enter product name: ")
+            price = float(input("Enter product price: "))
+            qty = int(input("Enter product quantity: "))
+            product = Products(code, name, price, qty)
+            product_list.append(product)
+    if opt == 2:
+        print("\nProduct Information:")
+        for product in product_list:
+            product.view()
+    if opt == 3:
+        code_to_remove = input("Enter the product code to remove: ")
+        for product in product_list:
+            if product.code == code_to_remove:
+                product_list.remove(product)
+                break  # Stop after removing the first match
+    if opt == 4:
+        break

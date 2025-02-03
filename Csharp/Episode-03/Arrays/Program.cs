@@ -236,6 +236,38 @@ namespace Arrays
                         {
                             Console.WriteLine("Product code not found !!");
                         }
+                        else
+                        {
+                            Console.WriteLine("Product code update success !!");
+                        }
+                        break;
+                    case 5:
+                        Console.WriteLine("Delete Data");
+                        Console.WriteLine("----------------------");
+                        Console.Write("enter code to delete : ");
+                        searchcode = Convert.ToInt32(Console.ReadLine());
+                        for (int i = 0; i < count; i++)
+                        {
+                            if (code[i] == searchcode)
+                            {
+                                for(int j = i; j < count -1; j++)
+                                {
+                                    code[j] = code[j + 1];
+                                    name[j] = name[j + 1];
+                                    price[j] = price[j + 1];
+                                }
+                                count--;
+                                find = true;
+                            }
+                        }
+                        if (find == false)
+                        {
+                            Console.WriteLine("Product code not found !!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Product code delete success !!");
+                        }
                         break;
                 }
             } while (opt != 6);
