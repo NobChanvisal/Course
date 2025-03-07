@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\bin\Debug\MethodDemo.exe.config
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\bin\Debug\MethodDemo.exe
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\bin\Debug\MethodDemo.pdb
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\obj\Debug\MethodDemo.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\obj\Debug\MethodDemo.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\obj\Debug\MethodDemo.exe
+D:\learn Code\Course\Csharp\Episode-04\MethodDemo\obj\Debug\MethodDemo.pdb

@@ -1,0 +1,17 @@
+#user input
+a = "Register your information"
+print(a.upper())
+print("----------------------------------")
+userName = input("Enter username : ")
+age = input("Enter Age : ")
+gender = input("Enter gender : ")
+university = input("Enter university : ")
+future = input("Enter future goal : ")
+print()
+print("Your information data ")
+print("----------------------------")
+print("Name        : ",userName.upper())
+print("Age         : ",age.upper())
+print("Gender      : ",gender.upper())
+print("University  : ",university.upper())
+print("Future Goal : ",future.upper())

@@ -1,0 +1,7 @@
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\bin\Debug\Operator.exe.config
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\bin\Debug\Operator.exe
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\bin\Debug\Operator.pdb
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\obj\Debug\Operator.csproj.AssemblyReference.cache
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\obj\Debug\Operator.csproj.CoreCompileInputs.cache
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\obj\Debug\Operator.exe
+D:\learn Code\Teaching\Csharp\Episode-01\Operator\obj\Debug\Operator.pdb

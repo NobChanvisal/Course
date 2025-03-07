@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Salary Report</title>
+  </head>
+  <body>
+    <script>
+      let id = 100;
+      let name = "Chan thida";
+      let gender = "male";
+      let hour = 500;
+      let money = 1.5;
+      let taxRate = 0.2;
+
+      let salary = hour * money;
+      let moneyTax = (taxRate / 100) * salary;
+      let totalSalary = salary - moneyTax;
+
+      console.log(`======= Employee Salary Report =======`);
+      console.log(`ID     : ${id}`);
+      console.log(`Name   : ${name}`);
+      console.log(`Gender : ${gender}`);
+      console.log(`Hour Worked : ${hour} hrs`);
+      console.log(`Rate/Hour  : $${money.toFixed(2)}`);
+      console.log(`---------------------------------------`);
+      console.log(`Salary     : $${salary.toFixed(2)}`);
+      console.log(`Tax Rate   : ${taxRate}%`);
+      console.log(`Tax Amount : $${moneyTax.toFixed(2)}`);
+      console.log(`Total Salary : $${totalSalary.toFixed(2)}`);
+      console.log(`=======================================`);
+    </script>
+  </body>
+</html>

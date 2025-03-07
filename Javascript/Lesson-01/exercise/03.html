@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Invoice</title>
+  </head>
+  <body>
+    <script>
+      let code = 1;
+      let name = "T-shirt";
+      let price = 20.5;
+      let qty = 10;
+      let discount = 20;
+
+      let total = price * qty;
+      let save = (total * discount) / 100;
+      let payment = total - save;
+
+      console.log(`========= Product Invoice ==========`);
+      console.log(`Code    : ${code}`);
+      console.log(`Product : ${name}`);
+      console.log(`Price   : $${price.toFixed(2)}`);
+      console.log(`Quantity: ${qty}`);
+      console.log(`-------------------------------------`);
+      console.log(`Total   : $${total.toFixed(2)}`);
+      console.log(`Discount: ${discount}%`);
+      console.log(`Savings : $${save.toFixed(2)}`);
+      console.log(`Payment : $${payment.toFixed(2)}`);
+      console.log(`=====================================`);
+    </script>
+  </body>
+</html>
