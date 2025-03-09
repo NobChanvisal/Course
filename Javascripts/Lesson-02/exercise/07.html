@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+        let staffId = "S001";
+        let staffName = "Jane Doe";
+        let staffGender = "Female";
+        let crossSalary = 1000000; 
+        let taxRate = 0;
+        let deduction = 0;
+
+        if (crossSalary > 1250000) {
+            taxRate = 20; 
+            deduction = 70000;
+        } 
+        else if (crossSalary > 850000 ) {
+            taxRate = 15; 
+            deduction = 60000;
+        } else if (crossSalary >= 200000) {
+            taxRate = 10; 
+            deduction = 55000;
+        } else if (crossSalary >= 150000) {
+            taxRate = 5; 
+            deduction = 45000;
+        }
+
+        let netSalary = (taxRate/100 * crossSalary) + deduction;
+        let totalSalary = crossSalary - netSalary;
+
+        console.log(`Staff ID: ${staffId}`);
+        console.log(`Staff Name: ${staffName}`);
+        console.log(`Staff Gender: ${staffGender}`);
+        console.log(`Cross Salary: ${crossSalary} R`);
+        console.log(`Net Salary (Tax + Deduction): ${netSalary} R`);
+        console.log(`Total Salary (Take-Home): ${totalSalary} R`);
+    </script>
+</body>
+</html>

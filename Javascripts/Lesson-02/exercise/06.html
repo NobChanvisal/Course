@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let productCode = "P123";
+        let productName = "T-shirt";
+        let quantity = 5;
+        let price = 80;
+        let discountPercentage = 0;
+
+        let total = price * quantity;
+
+        if (total > 500) {
+            discountPercentage = 20;
+        } 
+        else if (total > 400) {
+            discountPercentage = 15;
+        } 
+        else if (total > 300) {
+            discountPercentage = 10;
+        } 
+        else if (total > 200) {
+            discountPercentage = 5;
+        }
+
+        let save = (total * discountPercentage) / 100;
+        let payment = total - save;
+
+        console.log(`Product Code: ${productCode}`);
+        console.log(`Product Name: ${productName}`);
+        console.log(`Quantity: ${quantity}`);
+        console.log(`Price: $${price}`);
+        console.log(`Total: $${total}`);
+        console.log(`Discount Percentage: ${discountPercentage}%`);
+        console.log(`Save (Discount): $${save.toFixed(2)}`);
+        console.log(`Payment: $${payment.toFixed(2)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDC Usage Calculation</title>
+</head>
+<body>
+    <script>
+        // EDC Usage Calculation
+        let customerName = "Alice Smith";
+        let oldUsage = 120;
+        let newUsage = 180;
+
+        let usage = newUsage - oldUsage;
+        let edcPayment = 0; // Initialize payment
+        if (newUsage > oldUsage) 
+        {
+            console.log("Error: New usage must be greater than old usage.");
+        }
+        else {
+            if (usage <= 50) {
+                edcPayment = usage * 350;
+            } else if (usage <= 100) {
+                edcPayment = 50 * 350 + (usage - 50) * 400;
+            } else if (usage <= 150) {
+                edcPayment = 50 * 350 + 50 * 400 + (usage - 100) * 500;
+            } else if (usage <= 200) {
+                edcPayment = 50 * 350 + 50 * 400 + 50 * 500 + (usage - 150) * 600;
+            } else {
+                edcPayment = 50 * 350 + 50 * 400 + 50 * 500 + 50 * 600 + (usage - 200) * 700;
+            }
+
+            // Output Results
+            console.log(`Customer Name: ${customerName}`);
+            console.log(`Old Usage: ${oldUsage} km³`);
+            console.log(`New Usage: ${newUsage} km³`);
+            console.log(`Usage: ${usage} km³`);
+            console.log(`Total Payment: ${edcPayment} r`);
+        } 
+    </script>
+</body>
+</html>

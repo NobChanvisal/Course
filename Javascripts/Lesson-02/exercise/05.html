@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+<body>
+    <script>
+        // Product Information
+        let productCode = "P123";
+        let productName = "Laptop";
+        let quantity = 3;
+        let price = 100;
+
+        // Calculate Total
+        let total = price * quantity;
+
+        // Calculate Discount
+        let discountPercentage = 0;
+
+        if (total > 500) {
+            discountPercentage = 20;
+        } 
+        else if (total > 400) {
+            discountPercentage = 15;
+        } 
+        else if (total > 300) {
+            discountPercentage = 10;
+        } 
+        else if (total > 200) {
+            discountPercentage = 5;
+        }
+
+        // Calculate Save (Discount Amount)
+        let save = (total * discountPercentage) / 100;
+
+        // Calculate Payment
+        let payment = total - save;
+
+        // Output Results
+        console.log(`Product Code: ${productCode}`);
+        console.log(`Product Name: ${productName}`);
+        console.log(`Quantity: ${quantity}`);
+        console.log(`Price: $${price}`);
+        console.log(`Total: $${total}`);
+        console.log(`Discount Percentage: ${discountPercentage}%`);
+        console.log(`Save (Discount): $${save.toFixed(2)}`);
+        console.log(`Payment: $${payment.toFixed(2)}`);
+    </script>
+</body>
+</html>
