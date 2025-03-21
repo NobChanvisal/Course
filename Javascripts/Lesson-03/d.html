@@ -1,0 +1,23 @@
+<script>
+    let sum = 0;
+    for(let i = 0; i<10; i++){
+        console.log(i)
+        sum = sum + i;
+    }
+    console.log(`this is sum : ${sum}`);
+
+    let sumOdd = 0; 
+    for(let i = 0; i<10; i++){
+        if(i % 2 == 0){
+            sumOdd = sum + i;
+        }
+    }
+    console.log(`this is sum of even number : ${sumOdd}`);
+    let sumEven = 0; 
+    for(let i = 0; i<10; i++){
+        if(i % 2 != 0){
+            sumEven = sum + i;
+        }
+    }
+    console.log(`this is sum of even number : ${sumEven}`);
+</script>
