@@ -1,8 +1,6 @@
 class StudentManager:
-    # filename = "./students.txt"
-
     def add_student():
-        with open("./students.txt", "a") as f:
+        with open("students.txt", "a") as f:
             student_id = input("Enter Student ID: ")
             name = input("Enter Student Name: ")
             course = input("Enter Course: ")
@@ -14,7 +12,7 @@ class StudentManager:
         print("\nStudent List:")
         print("--------------------------------")
         try:
-            with open("./students.txt", "r") as f:
+            with open("students.txt", "r") as f:
                 data = f.read()
                 print(data if data else "No students found.\n")
         except FileNotFoundError:
@@ -25,9 +23,9 @@ class StudentManager:
         search_id = input("Enter Student ID to search: ")
         found = False
         try:
-            with open("./students.txt", "r") as f:
+            with open("students.txt", "r") as f:
                 for line in f:
-                    if line.startswith(search_id + " "):  # Ensuring exact match
+                    if line.startswith(search_id + " "):
                         print("Student Found:")
                         print("--------------------------------")
                         print(line.strip())
@@ -42,11 +40,11 @@ class StudentManager:
         search_id = input("Enter Student ID to delete: ")
         found = False
         try:
-            with open("./students.txt", "r") as f:
+            with open("students.txt", "r") as f:
                 lines = f.readlines()
-            with open("./students.txt", "w") as f:
+            with open("students.txt", "w") as f:
                 for line in lines:
-                    if not line.startswith(search_id + " "):  # Ensuring exact match
+                    if not line.startswith(search_id + " "):  
                         f.write(line)
                     else:
                         found = True
@@ -54,9 +52,9 @@ class StudentManager:
         except FileNotFoundError:
             print("No students found.\n")
 
-# Main menu
+
 while True:
-    print("\n📚 Student Management System")
+    print("\nStudent Management System")
     print("--------------------------------")
     print("1. Add Student")
     print("2. View Students")
