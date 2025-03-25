@@ -28,16 +28,39 @@ class Products:
         print(f"Quantity: {self.qty}")
         print(f"Discount: ${self.find_discount():.2f}")
         print(f"Total Amount: ${self.total:.2f}")
-        # Fixed payment calculation: discount is a flat amount, not a percentage
         print(f"Payment: ${(self.total - self.dis):.2f}")
         print("-----------------------")
 
 # Product list to store all products
 product_list = []
 
+def load_products(filename="products.txt"):
+    """Loads products from a file."""
+    try:
+        with open(filename, "r") as file:
+            for line in file:
+                code, name, price, qty = line.strip().split(",")
+                product = Products(code, name, float(price), int(qty))
+                product_list.append(product)
+        print("Products loaded successfully!")
+    except FileNotFoundError:
+        print("Products file not found. Starting with an empty list.")
+    except ValueError:
+        print("Error reading products file. Data might be corrupted.")
+        product_list.clear() # clear the list if there are errors
+
+def save_products(filename="products.txt"):
+    """Saves products to a file."""
+    with open(filename, "w") as file:
+        for product in product_list:
+            file.write(f"{product.code},{product.name},{product.price},{product.qty}\n")
+    print("Products saved successfully!")
+
+load_products() # Load data when program starts.
+
 while True:
     print("\nOptions:")
-    print("1. Insert\t2. View\t3. Search\t4. Delete\t5. Update\t6. Exit")
+    print("1. Insert\n2. View\n3. Search\n4. Delete\n5. Update\n6. Exit")
     try:
         opt = int(input("Enter option: "))
     except ValueError:
@@ -56,6 +79,7 @@ while True:
                 product = Products(code, name, price, qty)
                 product_list.append(product)
             print(f"{count} product(s) added successfully!")
+            save_products() #save after adding products
         except ValueError:
             print("Invalid input. Please enter numeric values for price and quantity.")
 
@@ -93,6 +117,7 @@ while True:
                     product_list.remove(product)
                     print(f"Product with code '{code_to_remove}' removed successfully!")
                     found = True
+                    save_products() #save after deleting a product
                     break
             if not found:
                 print(f"No product found with code '{code_to_remove}'.")
@@ -105,25 +130,24 @@ while True:
             found = False
             for product in product_list:
                 if product.code == code_to_update:
-                   
-                        print("\nEnter new details:")
-                        new_code = input(f"New code : ") 
-                        new_name = input(f"New name : ") 
-                        new_price = input(f"New price : ") 
-                        new_qty = input(f"New quantity: ") 
+                    print("\nEnter new details:")
+                    new_code = input(f"New code : ")
+                    new_name = input(f"New name : ")
+                    new_price = input(f"New price : ")
+                    new_qty = input(f"New quantity: ")
 
-                       
-                        product.code = new_code
-                        product.name = new_name
-                        product.price = float(new_price)
-                        product.qty = int(new_qty)
+                    product.code = new_code
+                    product.name = new_name
+                    product.price = float(new_price)
+                    product.qty = int(new_qty)
 
-                        print("\nUpdated Product Details:")
-                        product.view()
-                        print("Product updated successfully!")
-                        found = True
-                        break
-                   
+                    print("\nUpdated Product Details:")
+                    product.view()
+                    print("Product updated successfully!")
+                    found = True
+                    save_products() #save after updating a product
+                    break
+
             if not found:
                 print(f"No product found with code '{code_to_update}'.")
 

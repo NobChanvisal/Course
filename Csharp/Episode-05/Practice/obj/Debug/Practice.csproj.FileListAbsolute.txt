@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-05\Practice\bin\Debug\Practice.exe.config
+D:\learn Code\Course\Csharp\Episode-05\Practice\bin\Debug\Practice.exe
+D:\learn Code\Course\Csharp\Episode-05\Practice\bin\Debug\Practice.pdb
+D:\learn Code\Course\Csharp\Episode-05\Practice\obj\Debug\Practice.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-05\Practice\obj\Debug\Practice.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-05\Practice\obj\Debug\Practice.exe
+D:\learn Code\Course\Csharp\Episode-05\Practice\obj\Debug\Practice.pdb

@@ -1,0 +1,9 @@
+body{
+    height: 2000px;
+}
+.bottom-right{
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
