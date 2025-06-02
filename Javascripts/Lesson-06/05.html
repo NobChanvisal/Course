@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05</title>
+    <style>
+      input {
+        padding: 10px;
+        width: 200px;
+        border-radius: 8px;
+        border: 1px solid gray;
+      }
+      button {
+        padding: 10px 30px;
+        border: none;
+        background-color: lightblue;
+        cursor: pointer;
+        &:hover {
+          background-color: lightskyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input class="text-box" type="text" />
+    <div class="display"></div>
+    <script>
+      const text_input = document.querySelector(".text-box");
+      text_input.addEventListener("keyup", (e) => {
+        display();
+      });
+
+      function display() {
+        document.querySelector(
+          ".display"
+        ).innerHTML = `<p>${text_input.value}</p>`;
+      }
+    </script>
+  </body>
+</html>

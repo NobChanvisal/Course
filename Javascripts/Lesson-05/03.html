@@ -1,0 +1,21 @@
+<script>
+  function findgrade(total) {
+    if (total >= 90) {
+      grade = "A";
+    } else if (total >= 80) {
+      grade = "B";
+    } else if (total >= 70) {
+      grade = "C";
+    } else if (total >= 60) {
+      grade = "D";
+    } else if (total >= 50) {
+      grade = "E";
+    } else {
+      grade = "F";
+    }
+    return grade;
+  }
+
+  console.log(findgrade(100))
+  console.log(findgrade(50))
+</script>

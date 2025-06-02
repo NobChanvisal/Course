@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>First heading</h2>
+    <p id="first">Hi, There!</p>
+    <p class="myClass">JavaScript is fun.</p>
+    <nav class="primary-nav">
+      <ul>
+        <li class="menu-item current"><a href="#home">Home</a></li>
+        <li class="menu-item"><a href="#services">Services</a></li>
+        <li class="menu-item"><a href="#about">About</a></li>
+        <li class="menu-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="myButton" onclick="message()">My button</button>
+    <button class="myButton">Two button</button>
+    <div id="showData"></div>
+    <script>
+      const elem = document.getElementById("first");
+      let headings = document.getElementsByTagName("h2");
+      let elements = document.getElementsByClassName("myClass");
+      let button = document.querySelector(".myButton");
+      let buttonUseGetclass = document.getElementsByClassName("myButton");
+      let allMenuItem = document.querySelectorAll(".menu-item");
+      let show = document.getElementById("showData");
+
+      console.log(elem);
+      console.log(headings);
+      console.log(elements);
+      console.log(button);
+      console.log(buttonUseGetclass);
+      console.log(allMenuItem);
+
+      show.innerHTML = "<p>This is data from js !!</p>";
+    </script>
+  </body>
+</html>

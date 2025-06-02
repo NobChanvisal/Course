@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02</title>
+    <style>
+      button {
+        width: 100px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(232, 232, 232);
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+      }
+      .active {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="home-button" onclick="toggleButton('.home-button')">
+      Home
+    </button>
+    <button class="about-button" onclick="toggleButton('.about-button')">
+      About
+    </button>
+    <button class="contact-button" onclick="toggleButton('.contact-button')">
+      Contact
+    </button>
+    <script>
+      function toggleButton(selector) {
+        const button = document.querySelector(selector);
+        if (!document.querySelector("active")) {
+          turnOFFAll();
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+        }
+      }
+
+      function turnOFFAll() {
+        const previousButton = document.querySelector(".active");
+        if (previousButton) {
+          previousButton.classList.remove("active");
+        }
+      }
+    </script>
+  </body>
+</html>

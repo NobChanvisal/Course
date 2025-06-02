@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04</title>
+    <style>
+      input {
+        padding: 10px;
+        width: 200px;
+        border-radius: 8px;
+        border: 1px solid gray;
+      }
+      button {
+        padding: 10px 30px;
+        border: none;
+        background-color: lightblue;
+        cursor: pointer;
+        &:hover {
+          background-color: lightskyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input class="text-box" type="text" placeholder="enter score" />
+    <button id="submit-button">Calculate</button>
+    <div class="display"></div>
+    <script>
+      const text_input = document.querySelector(".text-box");
+      const submit_btn = document.getElementById("submit-button");
+      submit_btn.addEventListener("click", () => {
+        display();
+      });
+
+      function findRank(total) {
+        total = Number(total);
+        if (total >= 90) {
+          return "A";
+        } else if (total >= 80) {
+          return "B";
+        } else if (total >= 70) {
+          return "C";
+        } else if (total >= 60) {
+          return "E";
+        } else if (total >= 50) {
+          return "D";
+        } else {
+          return "F";
+        }
+      }
+
+      function display() {
+        let total = Number(text_input.value);
+        let grade = findRank(total);
+        document.querySelector(
+          ".display"
+        ).innerHTML = `<p>You get grade : ${grade}</p>`;
+      }
+    </script>
+  </body>
+</html>

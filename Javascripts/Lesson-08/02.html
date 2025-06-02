@@ -1,0 +1,29 @@
+<!-- 
+ - create <input/> type text . after when click button change the type at input 
+   will be change to file.
+ - modify code to use condition to check if <input/> type text change to file .
+   and if file change to text. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>Change</button>
+    <script>
+      const text_box = document.querySelector("input");
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", () => {
+        let type = text_box.getAttribute("type");
+        console.log(type);
+        let changeType = type === "text" ? "file" : "text";
+        text_box.setAttribute("type", changeType);
+      });
+    </script>
+  </body>
+</html>

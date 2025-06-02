@@ -23,9 +23,9 @@ int searchs;
 //product
 void insert();
 void output();
-// void search();
-// void update();
-// void remove();  
+void search();
+void updateStock();
+void remove();  
 void sale();
 void invoice();
 void login();
@@ -40,9 +40,9 @@ int main() {
 }
 void login() {
     string username;
-    char password[20]; // Array to store the password
+    char password[20]; 
     char temp1;
-    int i = 0; // To track the position in the password array
+    int i = 0;
 
     cout << endl;
     cout << "Login to your account" << endl;
@@ -53,20 +53,20 @@ void login() {
 
     while (true) {
         temp1 = getch();
-        // If Enter key is pressed, stop reading
+        
         if (temp1 == '\r') {
-            password[i] = '\0'; // Null-terminate the string
+            password[i] = '\0'; 
             break;
         }
-        // If Backspace is pressed
+       
         if (temp1 == '\b') {
             if (i > 0) {
-                cout << "\b \b"; // Move cursor back, overwrite with space, and move back again
-                i--; // Move back in the array
+                cout << "\b \b"; 
+                i--;
             }
             continue;
         }
-        // Accept any printable character, including symbols and spaces
+        
         if (i < 19 && (temp1 >= 32 && temp1 <= 126)) {
             password[i] = temp1;
             cout << "*";
@@ -90,7 +90,7 @@ void manageProduct() {
         cout << "[1]. Insert Product" << endl;
         cout << "[2]. View Product" << endl;
         cout << "[3]. Search Product" << endl;
-        cout << "[4]. Update Product" << endl;
+        cout << "[4]. Update Stock" << endl;
         cout << "[5]. Sale Product" << endl;
         cout << "[6]. Delete Product" << endl;
         cout << "[7]. View All Invoices" << endl;
@@ -102,10 +102,10 @@ void manageProduct() {
         switch (opt) {
             case 1: insert(); break;
             case 2: output(); break;
-            // case 3: search(); break;
-            // case 4: update(); break;
+            case 3: search(); break;
+            case 4: updateStock(); break;
             case 5: sale(); break;
-            // case 6: remove(); break;  
+            case 6: remove(); break;  
             case 7: invoice(); break;
             case 8: cout << "Exiting Product Menu..." << endl; break;
             default: cout << "Invalid option. Please try again." << endl;
@@ -142,17 +142,85 @@ void output() {
     }
 }
 void search() {
-    
+    int searchCode;
+    cout << "Enter product code to search: ";
+    cin >> searchCode;
+
+    bool found = false;
+    for (int i = 0; i < countPro; ++i) {
+        if (code[i] == searchCode) {
+            cout << "Product found:\n";
+            cout << "Code: " << code[i] << endl;
+            cout << "Name: " << proname[i] << endl;
+            cout << "Price: $" << price[i] << endl;
+            cout << "Quantity: " << qty[i] << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Product not found.\n";
+    }
 }
 
-void update() {
-    
+void updateStock() {
+    int updateCode, newQty;
+    cout << "Enter product code to update stock: ";
+    cin >> updateCode;
+
+    bool found = false;
+    for (int i = 0; i < countPro; ++i) {
+        if (code[i] == updateCode) {
+            cout << "Enter new quantity: ";
+            cin >> newQty;
+            qty[i] = qty[i] + newQty;
+            cout << "Stock updated.\n";
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Product not found.\n";
+    }
 }
 
 void remove() {
-    
-}
+    int removeCode;
+    cout << "Enter product code to remove: ";
+    cin >> removeCode;
 
+    bool found = false;
+    for (int i = 0; i < countPro; ++i) {
+        if (code[i] == removeCode) {
+            
+            for (int j = i; j < countPro - 1; ++j) {
+                code[j] = code[j + 1];
+                proname[j] = proname[j + 1];
+                price[j] = price[j + 1];
+                qty[j] = qty[j + 1];
+            }
+            countPro--; 
+            cout << "Product removed.\n";
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Product not found.\n";
+    }
+}
+void getInvoice(int invProcode, string name, int qty, float price){
+    invoiceId[invCount] = invCount + 1;
+    invProCode[invCount] = invProcode;
+    invProname[invCount] = name;
+    invSaleQty[invCount] = qty;
+    invPrice[invCount] = price;
+    invToPrice[invCount] = qty * price;
+    invCount++;
+}
 void sale() {
     cout <<endl<< "Enter Product Code for Sale: ";
     cin >> searchs;
@@ -163,16 +231,8 @@ void sale() {
             cout << "Enter Quantity to Sell: ";
             cin >> saleQty;
             if (saleQty <= qty[i]) {
-                qty[i] -= saleQty; // Reduce stock
-                // Store sale in invoice arrays
-                total[i] = saleQty * price[i];
-                invoiceId[invCount] = invCount + 1;
-                invProCode[invCount] = searchs;
-                invProname[invCount] = proname[i];
-                invSaleQty[invCount] = saleQty;
-                invPrice[invCount] = price[i];
-                invToPrice[invCount] = total[i];
-                invCount++;
+                qty[i] -= saleQty; 
+                getInvoice(searchs,proname[i],saleQty,price[i]);
                 cout<< "Sale successfully!"<<endl;
                 return;
             } else {
@@ -190,7 +250,7 @@ void invoice() {
     cout << "----------------------------------" << endl;
     cout << "Invoice" << endl;
     cout << "----------------------------------" << endl;
-    cout << left << setw(10) << "Invoice ID"
+    cout << left << setw(15) << "Invoice ID"
          << setw(10) << "Code"
          << setw(20) << "Product Name"
          << setw(10) << "Qty"
@@ -200,7 +260,7 @@ void invoice() {
     cout << "------------------------------------------------------------" << endl;
 
     for (int i = 0; i < invCount; i++) {
-        cout << left << setw(10) << invoiceId[i]
+        cout << left << setw(15) << invoiceId[i]
              << setw(10) << invProCode[i]
              << setw(20) << invProname[i]
              << setw(10) << invSaleQty[i]

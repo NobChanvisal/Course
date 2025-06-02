@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="message()">Click button</button>
+    <button class="my-button">Click Me</button>
+    <div style="margin-top: 20px">
+      <input type="text" />
+      <button id="show-button">Show message</button>
+      <p class="message"></p>
+    </div>
+
+    <script>
+      let button = document.querySelector(".my-button");
+      let mymessage = document.querySelector(".message");
+      let input = document.querySelector("input");
+      let show_button = document.getElementById("show-button");
+      function message() {
+        console.log("Your have been click button !!");
+      }
+      function showinputMessage() {
+        mymessage.innerHTML = input.value;
+      }
+      button.addEventListener("click", message);
+      show_button.addEventListener("click", showinputMessage);
+    </script>
+  </body>
+</html>

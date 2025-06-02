@@ -1,0 +1,17 @@
+<script>
+  function exchangeMoney(money, from, to) {
+    if (from == "dollar" && to == "reil") {
+      return money * 4000;
+    } else if (from == "reil" && to == "dollar") {
+      return money / 4000;
+    } else if (from == "baht" && to == "reil") {
+      return money * 119.414;
+    } else if (from == "reil" && to == "baht") {
+      return money / 119.414;
+    } else {
+      return "No exchange";
+    }
+  }
+  console.log(exchangeMoney(4500, "reil", "dollar"));
+  console.log(exchangeMoney(10, "baht", "reil"));
+</script>

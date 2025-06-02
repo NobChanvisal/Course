@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02</title>
+    <style>
+      button {
+        width: 100px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(232, 232, 232);
+        cursor: pointer;
+      }
+      .active {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="home-button">Home</button>
+    <button class="about-button">About</button>
+    <button>Contact</button>
+    <script>
+      const home_btn = document.querySelector(".home-button");
+      const about_btn = document.querySelector(".about-button");
+      home_btn.addEventListener("click", () => {
+        if (home_btn.classList.contains("active")) {
+          home_btn.classList.remove("active");
+        } else {
+          home_btn.classList.add("active");
+        }
+      });
+      about_btn.addEventListener("click", () =>{
+        if (about_btn.classList.contains("active")) {
+          about_btn.classList.remove("active");
+        } else {
+          about_btn.classList.add("active");
+        }
+      })
+    </script>
+  </body>
+</html>

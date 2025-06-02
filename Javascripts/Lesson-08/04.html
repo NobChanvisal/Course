@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+      - create <div> with two custom data attributes (data-id="contents" data-value="20%")
+      - using (dataset.id) to get value of data-id from div element and show value to console
+    -->
+    <div id="main" data-id="contents" data-value="10%">
+      This is my main content
+    </div>
+
+    <script>
+      let element = document.querySelector("#main");
+      console.log(element.dataset.id);
+    </script>
+  </body>
+</html>

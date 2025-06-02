@@ -1,7 +1,32 @@
 <script>
-    let number = [1, 2, 3, 4, 5, 6];
-    
-    let filter_data = number.filter(num => num % 2 === 0);
-    
-    console.log(filter_data);
+  let number = [10, 2, 13, 4, 15, 6];
+  let filter_data = number.filter((num) => num % 2 === 0);
+  let productList = [
+    {
+      code: 1,
+      name: "T-shirt",
+      price: 25,
+      discount: 20,
+    },
+    {
+      code: 2,
+      name: "Jeans",
+      price: 30,
+    },
+    {
+      code: 3,
+      name: "shoes",
+      price: 80,
+    },
+    {
+      code: 4,
+      name: "T-shirt",
+      price: 25,
+      discount: 10,
+    },
+  ];
+  let discountProduct = productList.filter((pro) => pro.discount != null);
+  console.log(filter_data);
+  console.log("discount products : ");
+  console.log(discountProduct);
 </script>

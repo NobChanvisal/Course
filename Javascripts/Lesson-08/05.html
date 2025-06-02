@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05</title>
+    <style>
+      button {
+        width: 100px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(232, 232, 232);
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+      }
+      .active {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        - Create three <button> elements in HTML and identification a data-id attribute (e.g., home, about, contact) to store custom data.
+        - using javascript selector : document.querySelectorAll("button") selects all <button> elements on the page and stores them in the buttons variable
+        - uses forEach to iterate over the buttons and an event listener. ( btn.addEventListener("click", (e) => {} )
+        - When a user clicks a button, the corresponding data-id value (e.g., "home") is printed to the browser's console
+    -->
+    <button class="home-button" data-id="home">Home</button>
+    <button class="about-button" data-id="about">About</button>
+    <button class="contact-button" data-id="contact">Contact</button>
+    <script>
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const button_id = e.target.dataset.id;
+          console.log(button_id);
+        });
+      });
+    </script>
+  </body>
+</html>

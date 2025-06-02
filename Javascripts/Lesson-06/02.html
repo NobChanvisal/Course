@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02</title>
+  </head>
+  <body>
+    <button class="html-btn" onclick="show('HTML')">Html</button>
+    <button class="css-btn" onclick="show('Css')">Css</button>
+    <p class="show"></p>
+    <script>
+      let html_button = document.querySelector(".html-btn");
+      let css_button = document.querySelector(".css_btn");
+      let show_content = document.querySelector(".show");
+      function show(message) {
+        show_content.innerHTML = `Your choice : ${message}`;
+      }
+    </script>
+  </body>
+</html>
