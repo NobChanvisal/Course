@@ -77,14 +77,19 @@ namespace Arrays
             }
             Console.WriteLine("Student information");
             Console.WriteLine("----------------------------");
+            Console.Write($"{"ID".ToString().PadRight(10)}");
+            Console.Write($"{"Name".PadRight(30)}");
+            Console.Write($"{"Gender".ToString().PadRight(10)}");
+            Console.Write($"{"Total".ToString().PadRight(10)}");
+            Console.WriteLine($"{"Grade".ToString().PadRight(10)}");
             for (int i = 0; i < count; i++)
             {
-                Console.WriteLine($"Student {i + 1}");
-                Console.WriteLine($"\tId      = {id[i]}");
-                Console.WriteLine($"\tName    = {name[i]}");
-                Console.WriteLine($"\tGender  = {gender[i]}");
-                Console.WriteLine($"\tTotal   = {total[i]}");
-                Console.WriteLine($"\tGrande  = {g[i]}");
+               
+                Console.Write($"{id[i].ToString().PadRight(10)}");
+                Console.Write($"{name[i].PadRight(30)}");
+                Console.Write($"{gender[i].ToString().PadRight(10)}");
+                Console.Write($"{total[i].ToString().PadRight(10)}");
+                Console.WriteLine($"{g[i].ToString().PadRight(10)}");
             }
         }
         static void employee()
@@ -127,15 +132,22 @@ namespace Arrays
 
             Console.WriteLine("\nOutput Data of Employees:");
             Console.WriteLine("--------------------------");
+            Console.Write($"{"ID".ToString().PadRight(10)}");
+            Console.Write($"{"Name".ToString().PadRight(30)}");
+            Console.Write($"{"Gender".ToString().PadRight(10)}");
+            Console.Write($"{"Salary".ToString().PadRight(10)}");
+            Console.WriteLine($"{"Tax".ToString().PadRight(10)}");
+            Console.Write($"{"Total".ToString().PadRight(10)}");
+            Console.WriteLine("--------------------------");
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"Employee {i + 1}");
-                Console.WriteLine($"ID: {id[i]}");
-                Console.WriteLine($"Name: {name[i]}");
-                Console.WriteLine($"Sex: {sex[i]}");
-                Console.WriteLine($"Salary: {salary[i]}");
-                Console.WriteLine($"Tax: {tax[i]}");
-                Console.WriteLine($"Total: {total[i]}");
+ 
+                Console.Write($"{id[i].ToString().PadRight(10)}");
+                Console.Write($"{name[i].ToString().PadRight(30)}");
+                Console.Write($"{sex[i].ToString().PadRight(10)}");
+                Console.Write($"{salary[i].ToString().PadRight(10)}");
+                Console.WriteLine($"{tax[i].ToString().PadRight(10)}");
+                Console.Write($"{total[i].ToString().PadRight(10)}");
                 Console.WriteLine("--------------------------");
             }
 
@@ -179,13 +191,14 @@ namespace Arrays
                         break;
                     case 2:
                         Console.WriteLine("View data");
-                        Console.WriteLine("----------------------");
+                        Console.WriteLine($"{"Code".PadRight(10)}{"Name".PadRight(30)}{"Price".PadRight(10)}");
+                        Console.WriteLine("------------------");
                         for (int i = 0; i < count; i++)
                         {
                             
-                            Console.WriteLine($"Code  = {code[i]}");
-                            Console.WriteLine($"Name  = {name[i]}");
-                            Console.WriteLine($"Price = {price[i]}");
+                            Console.Write($"{code[i].ToString().PadRight(10)}");
+                            Console.Write($"{name[i].PadRight(30)}");
+                            Console.WriteLine($"{price[i].ToString().PadRight(10)}");
                             Console.WriteLine("------------------");
                         }
                         break;
@@ -201,9 +214,9 @@ namespace Arrays
                             {
                                 Console.WriteLine("Search data : ");
                                 Console.WriteLine("------------------");
-                                Console.WriteLine($"Code  = {code[i]}");
-                                Console.WriteLine($"Name  = {name[i]}");
-                                Console.WriteLine($"Price = {price[i]}");
+                                Console.Write($"{code[i].ToString().PadRight(10)}");
+                                Console.Write($"{name[i].PadRight(30)}");
+                                Console.WriteLine($"{price[i].ToString().PadRight(10)}");
                                 find = true;
                             }
                         }

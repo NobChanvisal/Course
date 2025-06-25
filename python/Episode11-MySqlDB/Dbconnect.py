@@ -1,6 +1,5 @@
-import mysql.connector # type: ignore
+import mysql.connector 
 
-# Step 1: Connect to MySQL
 conn = mysql.connector.connect(
     host="127.0.0.1",
     user="root",

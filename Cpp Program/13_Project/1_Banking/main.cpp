@@ -8,7 +8,7 @@
 Account acc,accounts[100];
 Invoice setinv;
 Invoice invoices[100];
-int count = 0;
+int counts = 0;
 int invCount = 0;
 void registerAcc();
 string getPassword();
@@ -78,10 +78,10 @@ void read(){
         cout<< "File not found !!"<<endl;
         return;
     }
-    count = 0;
-    while (r.read((char*)&accounts[count], sizeof(Account)))
+    counts = 0;
+    while (r.read((char*)&accounts[counts], sizeof(Account)))
     {
-        count++;
+        counts++;
     }
     r.close();
 }
@@ -112,7 +112,7 @@ void search() {
     cout << "Enter id to search: ";
     cin >> searchid;
     read();
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         if (accounts[i].accId == searchid) {
             acc.header();
             accounts[i].viewAcc();
@@ -133,7 +133,7 @@ void update() {
     cin >> updateid;
 
     read();
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         if (accounts[i].accId == updateid) {
             cout << "Enter new data: \n";
             cout<< "Enter new name : ";
@@ -142,7 +142,7 @@ void update() {
             cin>>accounts[i].pw;
 
             ofstream w("account.txt", ios::binary);
-            for (int j = 0; j < count; j++) {
+            for (int j = 0; j < counts; j++) {
                 w.write((char*)&accounts[j], sizeof(Account));
             }
             w.close();
@@ -164,7 +164,7 @@ void deletes(){
     cin >> deleteid;
     read();
     ofstream w("account.txt", ios::binary);
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         if (accounts[i].accId != deleteid) {
             w.write((char*)&accounts[i], sizeof(Account));
         } else {
@@ -192,7 +192,7 @@ void deposit() {
     cout << "Enter Password to deposit: ";
     depw = getPassword();  // Assuming this function is defined elsewhere
 
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         if (accounts[i].pw == depw) {
             find = 1;
             cout << "\nEnter money to deposit: ";
@@ -200,7 +200,7 @@ void deposit() {
             accounts[i].balance += demoney;
 
             ofstream w("account.txt", ios::binary);
-            for (int j = 0; j < count; j++) {
+            for (int j = 0; j < counts; j++) {
                 w.write((char*)&accounts[j], sizeof(Account));
             }
             w.close();
@@ -235,7 +235,7 @@ void withdraw(){
     cout << "Enter Password to withdraw: ";
     depw = getPassword();  
 
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         if (accounts[i].pw == depw) {
             find = 1;
             cout << "\nEnter money to withdraw: ";
@@ -245,7 +245,7 @@ void withdraw(){
                 accounts[i].balance -= demoney;
 
                 ofstream w("account.txt", ios::binary);
-                for (int j = 0; j < count; j++) {
+                for (int j = 0; j < counts; j++) {
                     w.write((char*)&accounts[j], sizeof(Account));
                 }
                 w.close();
@@ -279,7 +279,7 @@ void viewBalance(){
     cout << "Enter Password : ";
     pw = getPassword(); 
     int find = 0;
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         if(accounts[i].pw == pw) {
             find = 1;
             cout<<endl<< "Your money Balance is : $"<< accounts[i].balance<<endl;
@@ -321,7 +321,7 @@ void admin(){
             cout<< "List Of Account"<<endl;
             cout<< "--------------------"<<endl<<endl;
             acc.header();
-            for(int i = 0; i<count; i++){
+            for(int i = 0; i<counts; i++){
                 accounts[i].viewAcc();
             }
             cout<<endl<< "Press any key to countinue !!";
@@ -429,7 +429,7 @@ void login() {
     password = getPassword();
 
     int found = 0;
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < counts; i++) {
         
         if(string(accounts[i].pw) == password && string(accounts[i].name) == username) {
             cout << endl << endl << "  --> Login successfully" << endl;

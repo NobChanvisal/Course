@@ -1,8 +1,15 @@
-import mysql
-import Dbconnect
-conn = Dbconnect.conn
-cursor = conn.cursor()
-# Menu loop
+# import mysql
+# import Dbconnect
+# conn = Dbconnect.conn
+# cursor = conn.cursor()
+import mysql.connector 
+conn = mysql.connector.connect(
+    host="127.0.0.1",
+    user="root",
+    password="Visal##SQL16",
+    database="python_db"
+)
+cursor = conn.cursor()# use it to: Run SQL commands (SELECT, INSERT, etc.)
 while True:
     print("\nMenu:")
     print("-----------------------")
@@ -17,7 +24,6 @@ while True:
 
     if opt == 1:
         # Insert Record
-        \
         new_name = input("Enter Name: ")
         new_price = float(input("Enter Price: "))
         new_qty = int(input("Enter Qty: "))
@@ -46,9 +52,8 @@ while True:
                 print(f"{record[0]:<10}{record[1]:<30}{record[2]:<10}{record[3]:<10}")
     elif opt == 3: 
         search = int(input("enter number to search : "))
-        sql ="SELECT * FROM products WHERE id = %s"
         id = (search,)
-        cursor.execute(sql, id)
+        cursor.execute("SELECT * FROM products WHERE id = %s", search)
         records = cursor.fetchone()
         
         if not records:
