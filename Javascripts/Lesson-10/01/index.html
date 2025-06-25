@@ -3,15 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container" id="grid-contain"></div>
-    <script src="script.js"></script>
+    <form action="">
+      <div class="input-group">
+        <label for="username">username</label>
+        <input type="text" name="username" id="js-username" required />
+      </div>
+      <div class="input-group">
+        <label for="username">email</label>
+        <input type="email" name="email" id="js-email" required />
+      </div>
+      <div class="input-group">
+        <label for="username">phone</label>
+        <input type="number" name="phone" id="js-phone" required />
+      </div>
+      <div class="gender-room">
+        <div>
+          <label for="gender">gender</label>
+          <div class="gender-group">
+            <div class="input-group">
+              <input type="radio" name="gender" id="js-male" />
+              <label for="male">male</label>
+            </div>
+            <div class="input-group">
+              <input type="radio" name="gender" id="js-female" />
+              <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="username">Class</label><br />
+          <select name="classRoom" id="js-classRoom">
+            <option value="A-1">A-1</option>
+            <option value="A-2">A-2</option>
+            <option value="A-3">A-3</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="address">address</label><br />
+        <textarea name="address" id="js-addr"></textarea>
+      </div>
+      <div class="file-uploads">
+        <label for="file-input" id="uploade-button">Browe</label>
+        <input type="file" id="file-input" hidden />
+      </div>
+      <input id="submit-button" type="submit" value="submit" />
+    </form>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>gender</th>
+            <th>room</th>
+          </tr>
+          <tr id="tb-contents"></tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>

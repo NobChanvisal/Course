@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      .count {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="count"></div>
+
+    <script>
+      const timer = document.querySelector(".count");
+      let count = 10;
+
+      let time = setInterval(() => {
+        if (count > 0) {
+          timer.innerHTML = count--;
+        } else {
+          clearInterval(time);
+          timer.innerHTML = "Happy New Year !!!";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

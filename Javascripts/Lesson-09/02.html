@@ -19,6 +19,8 @@
     <script>
       const Button = document.querySelector("button");
       Button.addEventListener("click", () => {
+        Button.innerHTML = "Loading...";
+
         setTimeout(() => {
           Button.innerHTML = "Finished";
         }, 1000);

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>01</title>
     <style>
-      button {
+      body {
         margin: 30px;
+      }
+      button {
         width: 100px;
         height: 30px;
         cursor: pointer;
@@ -14,14 +16,17 @@
     </style>
   </head>
   <body>
-    <button>Finish</button>
-
+    <button>Add to cart</button>
+    <p class="message"></p>
     <script>
       const Button = document.querySelector("button");
+      const Message = document.querySelector(".message");
       Button.addEventListener("click", () => {
+        Message.innerHTML = "Added";
+
         setTimeout(() => {
-          Button.innerHTML = "Finished";
-        }, 1000);
+          Message.innerHTML = "";
+        }, 2000);
       });
     </script>
   </body>
