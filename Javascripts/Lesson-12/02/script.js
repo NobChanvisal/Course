@@ -20,9 +20,9 @@ sumbitButton.addEventListener("click", (e) => {
 clearButton.addEventListener("click", () => {
   localStorage.clear();
 });
-  function saveData(data) {
-    localStorage.setItem("listStorage", JSON.stringify(data));//To convert a JavaScript value (object or array) into a JSON string.
-  }
+function saveData(data) {
+  localStorage.setItem("listStorage", JSON.stringify(data)); //To convert a JavaScript value (object or array) into a JSON string.
+}
 function remove(index) {
   list.splice(index, 1);
   saveData(list);
@@ -32,7 +32,7 @@ function loadData() {
   const storedList = localStorage.getItem("listStorage");
   if (storedList) {
     try {
-      list = JSON.parse(storedList);//To convert a JSON string back into a JavaScript value (object or array).
+      list = JSON.parse(storedList); //To convert a JSON string back into a JavaScript value (object or array).
     } catch (e) {
       console.error("Error parsing data from localStorage:", e);
       list = []; // Reset if parsing fails

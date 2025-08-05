@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\bin\Debug\05_Dictionary.exe.config
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\bin\Debug\05_Dictionary.exe
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\bin\Debug\05_Dictionary.pdb
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\obj\Debug\05_Dictionary.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\obj\Debug\05_Dictionary.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\obj\Debug\05_Dictionary.exe
+D:\learn Code\Course\Csharp\Episode-03\05_Dictionary\obj\Debug\05_Dictionary.pdb

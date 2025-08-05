@@ -19,7 +19,7 @@ namespace MethodDemo
             Console.WriteLine($"The value of Parameters = {name}");
         }
         //overloading 
-        static int add(int x, int y)
+        static int add(int x, int y)    
         {
             return x + y;
         }

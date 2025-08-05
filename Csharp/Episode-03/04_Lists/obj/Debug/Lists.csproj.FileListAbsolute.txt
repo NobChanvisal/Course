@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-03\Lists\bin\Debug\Lists.exe.config
+D:\learn Code\Course\Csharp\Episode-03\Lists\bin\Debug\Lists.exe
+D:\learn Code\Course\Csharp\Episode-03\Lists\bin\Debug\Lists.pdb
+D:\learn Code\Course\Csharp\Episode-03\Lists\obj\Debug\Lists.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-03\Lists\obj\Debug\Lists.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-03\Lists\obj\Debug\Lists.exe
+D:\learn Code\Course\Csharp\Episode-03\Lists\obj\Debug\Lists.pdb

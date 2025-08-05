@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data Logger</title>
+    <style>
+      /* Your existing CSS styles */
+      form {
+        max-width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px; /* Adjust spacing */
+        margin-bottom: 10px;
+      }
+      .box label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .box input[type="text"],
+      .box select {
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .box div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px; /* Spacing for radio/checkbox groups */
+      }
+      .box div input[type="radio"],
+      .box div input[type="checkbox"] {
+        margin-right: 8px;
+      }
+      button[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm" action="">
+      <div class="box">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+      </div>
+      <div class="box">
+        <label>Gender</label>
+        <div>
+          <input name="gender" id="male" type="radio" value="male" />
+          <label for="male">male</label>
+        </div>
+        <div>
+          <input name="gender" id="female" type="radio" value="female" />
+          <label for="female">female</label>
+        </div>
+      </div>
+      <div class="box">
+        <label for="shift">Shift</label>
+        <select name="shift" id="shift">
+          <option value="">--Please choose an option--</option>
+          <option value="night">night</option>
+          <option value="evening">evening</option>
+          <option value="morning">morning</option>
+        </select>
+      </div>
+      <div class="box">
+        <label>Course</label>
+        <div>
+          <input
+            type="checkbox"
+            id="html"
+            name="course"
+            class="course-checkbox"
+            value="html"
+          />
+          <label for="html">Html</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="css"
+            name="course"
+            class="course-checkbox"
+            value="css"
+          />
+          <label for="css">Css</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="javascript"
+            name="course"
+            class="course-checkbox"
+            value="javascript"
+          />
+          <label for="javascript">javascript</label>
+        </div>
+      </div>
+      <button type="submit">Get Data</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

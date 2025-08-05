@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\bin\Debug\Jagged Array.exe.config
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\bin\Debug\Jagged Array.exe
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\bin\Debug\Jagged Array.pdb
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\obj\Debug\Jagged Array.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\obj\Debug\Jagged Array.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\obj\Debug\Jagged Array.exe
+D:\learn Code\Course\Csharp\Episode-03\Jagged Array\obj\Debug\Jagged Array.pdb

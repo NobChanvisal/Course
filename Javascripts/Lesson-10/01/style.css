@@ -1,103 +1,36 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body{
+  background-color:whitesmoke;
 }
 form {
-  width: 400px;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.input-group {
-  padding-top: 10px;
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
 label {
-  text-transform: capitalize;
+  margin-bottom: 5px;
 }
-input:not([type="file"]),
-textarea,
-select {
-  border: 1px solid #acacac;
-  padding: 5px;
+input {
+  padding: 8px 10px;
 }
-input:not([type="radio"]) {
-  width: 100%;
-  height: 35px;
-  margin-top: 5px;
-  border-radius: 5px;
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
 }
-textarea {
-  width: 100%;
-  height: 70px;
-  margin-top: 5px;
-}
-.gender-room {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.gender-group {
-  display: flex;
-}
-.gender-group .input-group {
-  margin-right: 40px;
-}
-select {
-  margin-top: 5px;
-  width: 100px;
-  height: 28px;
-
-  border-radius: 5px;
-}
-.file-uploads {
-  margin-top: 20px;
-}
-#uploade-button {
-  color: white;
-  background-color: black;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-#submit-button {
-  margin-top: 20px;
-  background-color: lightblue;
-  border: none;
-}
-table {
-    width: 400px;
-  margin-top: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-
-}
-
-table td,
-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-table tr:hover {
-  background-color: #ddd;
-}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04aa6d;
-  color: white;
+button {
+  padding: 8px 20px;
+  margin-top: 8px;
 }

@@ -1,41 +1,40 @@
+const username = document.getElementById("txt-username");
 const submitButton = document.getElementById("submit-button");
+const password = document.getElementById("txt-password");
+const email = document.getElementById("txt-email");
+function showErrorMessage(id, message) {
+  const display = document.getElementById(id);
+  display.innerHTML = message;
+}
 
-let Students = [];
+function checkUsername() {
+  if (username.value === "") {
+    showErrorMessage("error-username", "username can't be blank");
+  } else {
+    showErrorMessage("error-username", "");
+  }
+}
+function checkPassword() {
+  if (password.value === "") {
+    showErrorMessage("error-password", "password can't be blank");
+  } else if (password.value.length < 8) {
+    showErrorMessage("error-password", "password must than 8 character");
+  } else {
+    showErrorMessage("error-password", "");
+  }
+}
 
+function checkEmail() {
+  if (email.value === "") {
+    showErrorMessage("error-email", "email can't be blank");
+  } else {
+    showErrorMessage("error-email", "");
+  }
+}
 
 submitButton.addEventListener("click", (e) => {
-  const username = document.getElementById("js-username").value;
-  const email = document.getElementById("js-email").value;
-  const phone = document.getElementById("js-phone").value;
-  const maleRadio = document.getElementById("js-male");
-  const femalRadio = document.getElementById("js-female");
-  const classRoom = document.getElementById("js-classRoom").value;
-  const address = document.getElementById("js-addr").value;
-  const showcontent = document.getElementById("tb-contents");
-
   e.preventDefault();
-  let gender = "";
-  if (maleRadio.checked) {
-    gender = "Male";
-  } else if (femalRadio.checked) {
-    gender = "female";
-  }
-
-  newData = {
-    username: username,
-    phone: phone,
-    gender: gender,
-    classRoom: classRoom,
-    address: address,
-  };
-  Students.push(newData)
-  console.log(Students)
-  const newRowContent = `
-            <td>${username}</td>
-            <td>${email}</td>
-            <td>${phone}</td>
-            <td>${gender}</td>
-            <td>${classRoom}</td>
-            `;
-  showcontent.innerHTML = newRowContent;
+  checkUsername();
+  checkEmail();
+  checkPassword();
 });
