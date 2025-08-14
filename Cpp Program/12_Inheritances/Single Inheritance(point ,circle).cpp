@@ -7,8 +7,7 @@ class Point{
 		int x;
 		int y;
 	public:
-		Point():x(0),y(0){}//(x= 0,y = 0);
-		Point(int a,int b):x(a),y(b){}
+	
 		void input(){
 			cout << "\tEnter x : ";cin>>x;
 			cout << "\tEnter y : ";cin>>y;	
@@ -17,12 +16,10 @@ class Point{
 			cout<< "\t("<< x<< ","<< y<< ")"<< endl;
 		}	
 };
-class Circle:private Point{
+class Circle:public Point{
 	private:
 		int r;
 	public:
-		Circle(): Point(),r(1){}
-		Circle(int x1, int y1, float r1):Point(x1,y1),r(r1){}
 		void input(){
 			Point::input();
 			cout << "\tEnter Radius : ";cin>>r;
@@ -37,15 +34,13 @@ class Circle:private Point{
 		}
 };
 int main(){
-	Circle c2, c1(35,60,20);
-	cout << "\tData of circle c1: "<< endl;
+	Circle c;
+	cout <<endl<< "\tEnter Data of Circle circle: "<< endl;
 	cout << "\t--------------------------------------"<< endl;
-	c1.output();
-	cout <<endl<< "\tEnter Data of Circle c2: "<< endl;
+	c.input();
+	cout <<endl<< "\tData of Circle: "<< endl;
 	cout << "\t--------------------------------------"<< endl;
-	c2.input();
-	cout <<endl<< "\tData of Circle c2: "<< endl;
-	cout << "\t--------------------------------------"<< endl;
-	c2.output();
+	c.output();
+
 	getch();
 }

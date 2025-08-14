@@ -5,3 +5,10 @@ D:\learn Code\Course\Csharp\Episode-03\Multi_Array\obj\Debug\Multi_Array.csproj.
 D:\learn Code\Course\Csharp\Episode-03\Multi_Array\obj\Debug\Multi_Array.csproj.CoreCompileInputs.cache
 D:\learn Code\Course\Csharp\Episode-03\Multi_Array\obj\Debug\Multi_Array.exe
 D:\learn Code\Course\Csharp\Episode-03\Multi_Array\obj\Debug\Multi_Array.pdb
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\bin\Debug\Multi_Array.exe.config
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\bin\Debug\Multi_Array.exe
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\bin\Debug\Multi_Array.pdb
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\obj\Debug\Multi_Array.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\obj\Debug\Multi_Array.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\obj\Debug\Multi_Array.exe
+D:\learn Code\Course\Csharp\Episode-03\02_Multi_Array\obj\Debug\Multi_Array.pdb

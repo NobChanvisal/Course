@@ -1,0 +1,66 @@
+1. Create an array of your favorite fruits (at least 5 fruits). Write a code to:
+- Display all fruits in the array.
+- Display the total number of fruits.
+- Display the first and last fruit in the array.
+ Sample Output:
+      Fruits: Apple, Banana, Orange, Mango, Strawberry
+      Total fruits: 5
+      First fruit: Apple
+      Last fruit: Strawberry
+
+2. Create an array with these elements: (e.g. Apple, Banana, Mango). write a code to :
+- add two more fruits: "Orange" and "Grapes" to array Use array_push() .
+- Display the updated array.
+
+3. continues from exercise write code to :
+- Remove Banana from array using array_splice().
+- Display the new array.
+
+4. Create an associative array to store grades for 4 students (e.g., John => 85, Jane => 92, etc.). Write a code to:
+- Display each student’s name and grade.
+- Calculate and display the average grade.
+- Find and display the student with the highest grade.
+Sample Output:
+	John: 85
+	Jane: 92
+	Mike: 78
+	Cristain: 95
+	Average grade: 87.5
+	Top student: Sarah with 95
+
+5. Update code on exercise 2 create an associative array to store for 4 student and 4 subject 
+(e.g. john => [html => 100, css => 100, php => 75], jane => [html => 80, css => 100, php =>100], etc.). write a code to 
+- Display each student’s name and grade.
+- Calculate and display the average grade.
+- Find and display the student with the highest grade.
+
+6. Create a numeric array of 10 random numbers between 1 and 100. Write a script to:
+- Display the original array.
+- Sort the array in ascending order and display it.
+- Sort the array in descending order and display it.
+Sample Output:
+	Original array: 45, 12, 89, 34, 67, 23, 91, 56, 78, 19
+	Ascending order: 12, 19, 23, 34, 45, 56, 67, 78, 89, 91
+	Descending order: 91, 89, 78, 67, 56, 45, 34, 23, 19, 12
+
+7. Create a multidimensional array to represent a store’s inventory (at least 3 items with name, price, and quantity)
+(e.g.["name" => "Laptop", "price" => 1000, "quantity" => 5], etc.) Write a code to:
+- Display the inventory in a formatted table-like output.
+- Calculate the total value of the inventory (price * quantity for each item).
+- Find the item with the lowest quantity.
+Sample output :
+	Item: Laptop, Price: $1000, Quantity: 5
+	Item: Phone, Price: $600, Quantity: 10
+	Item: Tablet, Price: $300, Quantity: 3
+	Total inventory value: $11900
+	
+
+8. Create an array of 8 numbers. Write a code to:
+- Filter out all numbers less than 50 and display the result.
+- Double each number in the original array and display the result.
+- Use array_filter() and array_map() for these operations.
+Sample output
+	Original array : 45, 60, 23, 80, 15, 90, 30, 55
+	Numbers >= 50 : 60, 80, 90, 55
+	Doubled numbers : 90, 120, 46, 160, 30, 180, 60, 110
+

@@ -35,7 +35,7 @@ namespace Jagged_Array
             for (int i = 0; i < jaggedArray.Length; i++)//jaggedArray.Length - gives the size of jagged array
             {
                 Console.Write($"Row {i}: ");
-                for (int j = 0; j < jaggedArray[i].Length; j++)//jaggedArray[i].Length - gives the size of elements of the ith array inside the jagged array
+                for (int j = 0; j < jaggedArray[i].Length; j++)//jaggedArray[i].Length - gives the size of elements of the array inside the jagged array
                 {
                     Console.Write($"{jaggedArray[i][j]} ");
                 }
@@ -56,14 +56,14 @@ namespace Jagged_Array
             //    2. Initialize the array with the following data:
             //      - Class 1: 85, 90, 78
             //      - Class 2: 92, 88
-            //      - Class 3: 95, 89, 91, 87
+            //      - Class 3: 95, 89, 91, 87, 99
             //    4. For each class, compute the average score by summing the elements and dividing by the number of students.
             //    3. Print the scores and average score for each class.
 
             int[][] classScore = new int[3][];
             classScore[0] = new int[] { 85, 90, 78 };
             classScore[1] = new int[] { 92, 88 };
-            classScore[2] = new int[] { 95, 89, 91, 87 };
+            classScore[2] = new int[] { 95, 89, 91, 87, 99 };
             for (int i = 0;i < classScore.Length; i++)
             {
                 Console.WriteLine($"Class {i+1} : ");

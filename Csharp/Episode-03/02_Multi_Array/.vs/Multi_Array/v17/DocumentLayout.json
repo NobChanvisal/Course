@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-03\\Multi_Array\\",
+  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-03\\02_Multi_Array\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65C9D5D0-F1E0-4636-A35A-6AA5626384C5}|Multi_Array.csproj|d:\\learn code\\course\\csharp\\episode-03\\multi_array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{65C9D5D0-F1E0-4636-A35A-6AA5626384C5}|Multi_Array.csproj|d:\\learn code\\course\\csharp\\episode-03\\02_multi_array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65C9D5D0-F1E0-4636-A35A-6AA5626384C5}|Multi_Array.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-03\\Multi_Array\\Program.cs",
+              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-03\\02_Multi_Array\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-03\\Multi_Array\\Program.cs",
+              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-03\\02_Multi_Array\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAywMgAAAAIAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAIwFEAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T11:31:46.624Z",
               "EditorCaption": ""

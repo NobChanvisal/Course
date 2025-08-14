@@ -47,10 +47,10 @@ namespace Multi_Array
             // Input
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine($"Enter grades for Student {i + 1}:");
+                Console.WriteLine($"Enter score for Student {i + 1}:");
                 for (int j = 0; j < 4; j++)
                 {
-                    Console.Write($"Subject {j + 1}: ");
+                    Console.Write($"\tSubject {j + 1}: ");
                     grades[i, j] = int.Parse(Console.ReadLine());
                 }
             }
@@ -79,6 +79,7 @@ namespace Multi_Array
                 float average = (float)sum / 4;
                 Console.WriteLine($"Student {i + 1} average: {average:F2}");
             }
+            Console.ReadLine();
         }
         static void busSeats()
         {
@@ -300,8 +301,8 @@ namespace Multi_Array
         static void Main(string[] args)
         {
             //lesson();
-            //studentTable();
-            busSeats();
+            studentTable();
+            //busSeats();
             //gridGame();
         }
     }

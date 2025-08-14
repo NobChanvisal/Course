@@ -1,0 +1,8 @@
+Challenge exercise : Save Uploaded Images into User-Specific Folders
++ Form fields :
+	- create <input type="text" /> for enter category and <input type="image"/> for upload image.
++ Logic :
+ 	 - When user enters their category in the form get category value to php. (e.g, food)
+	 - When they upload an image, it gets saved in a folder named after their username (e.g., images/food/).
+	 - image can upload only(jpg, png) and maximum 2MB
+	 - After a successful upload, show a preview of the image.
