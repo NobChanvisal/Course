@@ -47,7 +47,7 @@
 </head>
 <body>
     <div class="form-container">
-        <h2>Product Order Form (GET Method)</h2>
+        <h2>Product Order Form</h2>
         <form method="get" action="order.php">
             <div class="form-group">
                 <label for="product">Select Product:</label>

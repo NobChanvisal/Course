@@ -58,6 +58,7 @@ namespace Lists
             int opt;
             List<int> ids = new List<int>();
             List<string> names = new List<string>();
+            List<string> genders = new List<string>();
             List<double> scores = new List<double>();
 
             do
@@ -76,19 +77,22 @@ namespace Lists
                         int newId = int.Parse(Console.ReadLine());
                         Console.Write("Enter Name: ");
                         string newName = Console.ReadLine();
+                        Console.Write("Enter Gender : ");
+                        string newGender = Console.ReadLine();
                         Console.Write("Enter Score: ");
                         double newScore = double.Parse(Console.ReadLine());
                         ids.Add(newId);
                         names.Add(newName);
+                        genders.Add(newGender);
                         scores.Add(newScore);
                         break;
                     case 2:
 
-                        Console.WriteLine("\nID".PadRight(10) + " Name".PadRight(20) + " Score".PadRight(10));
+                        Console.WriteLine("\nID".PadRight(10)  + " Name".PadRight(20) + "Gender".PadRight(10) + " Score".PadRight(10));
                         Console.WriteLine("------------------------------------");
                         for (int i = 0; i < ids.Count; i++)
                         {
-                            Console.WriteLine(ids[i].ToString().PadRight(10) + names[i].PadRight(20) + scores[i].ToString().PadRight(10));
+                            Console.WriteLine(ids[i].ToString().PadRight(10) + names[i].PadRight(20) + genders[i].PadRight(10) + scores[i].ToString().PadRight(10));
                         }
                         break;
                     case 3:

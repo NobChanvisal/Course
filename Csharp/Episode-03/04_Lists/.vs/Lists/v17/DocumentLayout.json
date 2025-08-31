@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-03\\Lists\\",
+  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-03\\04_Lists\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BF9DB2F-4016-481F-9EDF-EB19E907C23D}|Lists.csproj|d:\\learn code\\course\\csharp\\episode-03\\lists\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7BF9DB2F-4016-481F-9EDF-EB19E907C23D}|Lists.csproj|d:\\learn code\\course\\csharp\\episode-03\\04_lists\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7BF9DB2F-4016-481F-9EDF-EB19E907C23D}|Lists.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-03\\Lists\\Program.cs",
+              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-03\\04_Lists\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-03\\Lists\\Program.cs",
+              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-03\\04_Lists\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAywDYAAAAIAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAAAF4AAABwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T10:14:27.368Z",
               "EditorCaption": ""

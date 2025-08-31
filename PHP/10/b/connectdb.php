@@ -4,7 +4,7 @@
     $host = 'localhost';
     $user = 'root';
     $pass = 'Visal##SQLite16';
-    $db = 'university_db';
+    $db = 'todo_list_db';
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
         // Set error mode

@@ -1,62 +1,80 @@
 <?php
-require_once "connectdb.php";
-
-// Insert
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $task = $_POST['task'];
-    $date = $_POST['date'];
-
-    if (!empty($task) && !empty($date)) {
-        // INSERT
-        $stmt = $pdo->prepare("INSERT INTO tbtodolist (task, date) VALUES (?, ?)");
-        $stmt->execute([$task, $date]);
-        header("Location: index.php");
-        exit;
-    }
-}
-
-// Handle Delete
-if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-    $stmt = $pdo->prepare("DELETE FROM tbtodolist WHERE id = ?");
-    $stmt->execute([$id]);
-    header("Location: index.php");
-    exit;
-}
-
-// Get all tasks
-$stmt = $pdo->query("SELECT * FROM tbtodolist ORDER BY id DESC");
-$todolist = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    require_once "connectdb.php";
+    $stmt = $pdo->query("SELECT student_id, student_name, gender FROM student ORDER BY student_id");
+    $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .add_link_content {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
-    <h2>To Do List</h2>
-    <form method="POST">
-        <input class="text-box" type="text" name="task" placeholder="Task" required>
-        <input class="date" type="date" name="date" required>
-        <button id="submit-button" type="submit">Add new</button>
-    </form>
+    <div class=" container">
+        <h1>Student list</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th colspan="2">Option</th>
+        </tr>
+        <tr>
+            <td class="add_link_content" colspan="5">
+                <a  href="./form.php">add (a student )</a>
+            </td>
+        </tr>
+        <?php foreach ($students as $student): ?>
+        <tr>
+            <td><a href="student_detail.php?id=<?=$student['student_id']?>"><?= htmlspecialchars($student['student_id']); ?></a></td>
+            <td><?= htmlspecialchars($student['student_name']); ?></td>
+            <td><?= htmlspecialchars($student['gender']); ?></td>  
+            <td>
+                <a href="./update.php?id=<?= $student['student_id'] ?>">Edit</a>
+            </td>
+            <td>
+                <a href="delete.php?id=<?= $student['student_id'] ?>" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a>
 
-    <div class="todolist">
-        <?php foreach ($todolist as $item): ?>
-            <div class = "todo-item">
-                <div>
-                    <h2><?php echo htmlspecialchars($item['task']); ?></h2>
-                    <p><?php echo $item['date']; ?></p>
-                </div>
-                <div class="button-content">
-                    <a class="delete" href="?delete=<?php echo $item['id']; ?>" onclick="return confirm('Delete this task?')">Delete</a>
-                </div>
-            </div>
+            </td>
+        </tr>
         <?php endforeach; ?>
+    </table>
     </div>
 </body>
 </html>
