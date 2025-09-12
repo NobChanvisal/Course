@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\bin\Debug\Class_Object.exe.config
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\bin\Debug\Class_Object.exe
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\bin\Debug\Class_Object.pdb
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\obj\Debug\Class_Object.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\obj\Debug\Class_Object.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\obj\Debug\Class_Object.exe
+D:\learn Code\Course\Csharp\Episode-05\Class_Object\obj\Debug\Class_Object.pdb

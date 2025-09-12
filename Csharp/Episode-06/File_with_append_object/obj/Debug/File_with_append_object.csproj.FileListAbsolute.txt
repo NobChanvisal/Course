@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\bin\Debug\File_with_append_object.exe.config
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\bin\Debug\File_with_append_object.exe
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\bin\Debug\File_with_append_object.pdb
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\obj\Debug\File_with_append_object.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\obj\Debug\File_with_append_object.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\obj\Debug\File_with_append_object.exe
+D:\learn Code\Course\Csharp\Episode-06\File_with_append_object\obj\Debug\File_with_append_object.pdb

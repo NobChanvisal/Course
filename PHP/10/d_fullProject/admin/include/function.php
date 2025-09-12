@@ -1,6 +1,6 @@
 <?php
     function Alert($typeColor, $message) {
-        return "<div id='alertBox' class='p-4 mb-4 text-sm text-$typeColor-700 bg-$typeColor-100 rounded-lg fixed bottom-4 right-4'>
+        return "<div id='alertBox'  class='p-4 z-30 mb-4 text-sm text-$typeColor-700 bg-$typeColor-100 rounded-lg fixed bottom-4 right-4'>
                     <span class='font-medium'>$message</span>
                 </div>
                 <script>

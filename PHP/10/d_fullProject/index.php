@@ -24,7 +24,8 @@
                     "name"       => $product['name'],
                     "image"      => $product['image'],
                     "price"      => $product['price'],
-                    "qty"        => 1
+                    "qty"        => 1,
+                    "category_id"=> $product['category_id'],
                 ];
                 dbInsert("tbcart",$data);
             }
@@ -39,22 +40,43 @@
     $subtotal = dbSum("tbcart","amount"); 
 
     //checkout
-    if(isset($_POST['checkout'])){
-        $cartsItems = dbSelect("tbcart");
-        
-        if($cartsItems){
-            $data = [
-                "items" => json_encode($cartsItems),
-                "total_amount" => $subtotal,
-                "order_date" => date("Y-m-d H:i:s")
-            ];
-            dbInsert("tborder",$data);
-            dbDelete("tbcart","");
-        }
+if(isset($_POST['checkout'])){
+    $cartsItems = dbSelect("tbcart");
+    
+    if($cartsItems){
+        // Begin a transaction to ensure all operations succeed or fail together
+        $pdo = getConnection();
+        $pdo->beginTransaction();
+            $sql = "INSERT INTO tbinvoice (amount, invoice_date) VALUES (:amount, :invoice_date)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([
+                ':amount' => $subtotal,
+                ':invoice_date' => date("Y-m-d H:i:s")
+            ]);
 
-        header("Location: index.php"); 
-        exit;
+            // Get the ID of the newly created invoice from the same PDO object
+            $invoiceId = $pdo->lastInsertId();
+
+            foreach ($cartsItems as $item) {
+               
+
+                $data = [
+                    "invoice_id" => $invoiceId,
+                    "product_id" => $item['product_id'],
+                    "category_id" => $item['category_id'],
+                    "qty" => $item['qty'],
+                ];
+                dbInsert("tbinvoicedetails", $data);
+            }
+            dbDelete("tbcart", "");
+            $pdo->commit();
+
     }
+
+    header("Location: index.php"); 
+    exit;
+}
+
     //remove cart item
     if(isset($_GET['remove_cart'])){
         $cartId = $_GET['remove_cart'];
@@ -125,16 +147,16 @@
             </div>
 
             <!-- Products Grid -->
-            <div class="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 overflow-y-auto">
+            <div class="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 overflow-y-auto pr-1">
                 <!-- Product Card  -->
                 <?php foreach($products as $product): ?>
                     <div class="bg-white rounded-2xl shadow-md p-2 flex flex-col h-fit">
                         <?php if(!$product['image']): ?>
                             <img src="https://placehold.co/200x150/f0f0f0/6b7280?text=No+Image" alt="" class="w-full h-40 object-cover rounded-xl mb-4">
                         <?php else: ?>
-                            <img  src="./image/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" class="w-full h-40 object-cover rounded-xl mb-4">
+                            <img  src="./image/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" class="w-full h-44 object-cover rounded-xl mb-4">
                         <?php endif; ?>
-                        <h3 class="font-semibold text-lg"><?= htmlspecialchars($product['name']) ?></h3>
+                        <h3 class="font-semibold text-lg line-clamp-1"><?= htmlspecialchars($product['name']) ?></h3>
                         <div class=" flex items-center justify-between w-full mt-4">
                             <p class="text-gray-500">$<?= htmlspecialchars($product['price']) ?></p>
                             <a href="?add_to_cart=<?= $product['id'] ?>"  class="">
@@ -168,7 +190,7 @@
                                 
                                 <div>
                                     <h3 class="font-semibold"> <?= $item['name']?> <span class="font-semibold"> (x<?= $item['qty']?>)</span></h3>
-                                    <p class="text-gray-500"><?= $item['price']?> </p>
+                                    <p class="text-gray-500">$<?= $item['price']?> </p>
                                 </div>
                             </div>
                             

@@ -44,6 +44,7 @@ function dbInsert($table, $data = array()) {
     }
     return $stmt->execute();
 }
+
 //dbInsert("users", ["username" => "john", "email" => "john@example.com"]);
 
 // UPDATE
@@ -78,6 +79,13 @@ function dbDelete($table, $criteria= "") {
     return $stmt->execute();
 }
 //dbDelete("users", "id=1");
+
+function db_Query($sql, $params = array(), $singleRow = false) {
+    $pdo = getConnection();
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
+    return $singleRow ? $stmt->fetch(PDO::FETCH_ASSOC) : $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 function dbSum($table, $columns,$criteria = ""){
     $pdo = getConnection();

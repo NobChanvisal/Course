@@ -1,0 +1,7 @@
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\bin\Debug\Encapsulation.exe.config
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\bin\Debug\Encapsulation.exe
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\bin\Debug\Encapsulation.pdb
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\obj\Debug\Encapsulation.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\obj\Debug\Encapsulation.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\obj\Debug\Encapsulation.exe
+D:\learn Code\Course\Csharp\Episode-05\Encapsulation\obj\Debug\Encapsulation.pdb
