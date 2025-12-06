@@ -1,0 +1,10 @@
+D:\learn Code\Course\Csharp\Episode-07\lab_04\bin\Debug\lab_04.exe.config
+D:\learn Code\Course\Csharp\Episode-07\lab_04\bin\Debug\lab_04.exe
+D:\learn Code\Course\Csharp\Episode-07\lab_04\bin\Debug\lab_04.pdb
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.Form1.resources
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.Properties.Resources.resources
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.csproj.GenerateResource.cache
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.exe
+D:\learn Code\Course\Csharp\Episode-07\lab_04\obj\Debug\lab_04.pdb

@@ -1,9 +1,0 @@
-
-
-Personal Information
-----------------------
-Name        : Nob Chanvisal
-Gender      : Male
-Age         : 19
-University  : RUPP
-Future Goal : I want to be a Software Engineering

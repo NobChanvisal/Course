@@ -90,3 +90,11 @@ public:
     double totalPrice;
     char bookingDate[20];
 };
+
+int main(){
+ int a;
+ if(a <= 10){
+    cout << "Hello World";
+    return 0;
+ }
+}

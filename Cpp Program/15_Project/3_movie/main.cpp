@@ -34,6 +34,9 @@ int main() {
                 view_seats();
                 break;
             case 4:
+                    if(a <= b){
+                        cout<<"no money";
+                    }
                 cout << "Exiting program. Goodbye!\n";
                 break;
             default:

@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B790D7F1-6084-42F0-B322-843B5168AB4E}|01.csproj|d:\\learn code\\course\\csharp\\episode-07\\lab_06\\01\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B790D7F1-6084-42F0-B322-843B5168AB4E}|01.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B790D7F1-6084-42F0-B322-843B5168AB4E}|01.csproj|d:\\learn code\\course\\csharp\\episode-07\\lab_06\\01\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B790D7F1-6084-42F0-B322-843B5168AB4E}|01.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B790D7F1-6084-42F0-B322-843B5168AB4E}|01.csproj|d:\\learn code\\course\\csharp\\episode-07\\lab_06\\01\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B790D7F1-6084-42F0-B322-843B5168AB4E}|01.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAArwEwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T08:17:55.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAuwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T07:13:18.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-07\\lab_06\\01\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T04:35:33.899Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Challenge Lab : 
+ + Create a new Laravel project: 
+	composer create-project laravel/laravel challenge_01
+ + Create a route that returns: Welcome to Laravel!
+ + Create a route /about that returns: This is the about page.
+ + Create a route /contact that returns an HTML string.
+ + Create a route /hello/{name} that displays:
+	"Hello, [name]! Welcome to our site."
+ + Create a route /product/{name?} that shows:
+	"Product name: {name}" if a name is provided
+	"No product selected" if not
+ + Create a route group with prefix /admin that have two pages : 
+	/dashboard
+	/invoices
+ + Create another group with prefix /shop that have three pages:
+	/products
+	/cart
+	/checkout
++ Create a
+	named route /signout.
+	named route /profile.
+	

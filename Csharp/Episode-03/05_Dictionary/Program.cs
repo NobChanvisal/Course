@@ -114,7 +114,7 @@ namespace _05_Dictionary
         static void Main(string[] args)
         {
             //lisson();
-            listWithDictionary();
+            //listWithDictionary();
         }
     }
 }

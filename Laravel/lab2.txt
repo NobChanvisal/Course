@@ -1,0 +1,8 @@
+Challeng 2 :
+1. Create a route /home and set Named Route 'home' that returns a Blade view named home.blade.php
+2. Create a route /about set Named Route 'about' that returns a Blade view named about
+3. Create a route /contact set Named Route 'contact' that returns a Blade view named contact
+4. Create a route group with prefix shop : 
+	- route / set Named Route 'shop.index' that returns a Blade view named shop/index.blade.php
+	- route /men set Named Route 'shop.men' that returns a Blade view named shop/men.blade.php
+	- route /women set Named Route 'shop.women' that returns a Blade view named shop/women.blade.php

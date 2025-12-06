@@ -1,0 +1,31 @@
+CREATE TABLE tbusers(
+    	id INT AUTO_INCREMENT PRIMARY KEY,
+    	username VARCHAR(100),
+    	email VARCHAR(100) UNIQUE NOT NULL,
+    	password VARCHAR(100)
+    );
+CREATE TABLE tbcategories(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)   
+);
+CREATE TABLE tbproducts(
+    	id INT AUTO_INCREMENT PRIMARY KEY,
+    	category_id INT NOT NULL,
+    	name VARCHAR(255) NOT NULL,
+    	price DECIMAL(10,2)  NOT NULL,
+    	description TEXT,
+    	FOREIGN KEY(category_id) REFERENCES tbcategories(id)
+);
+CREATE TABLE tbcarts(
+    	id INT AUTO_INCREMENT PRIMARY KEY,
+    	user_id INT UNIQUE,
+    	FOREIGN KEY(user_id) REFERENCES tbusers(id)
+    );
+CREATE TABLE tbcart_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cart_id INT NOT NULL,
+    product_id INT NOT NULL,
+    qty INT NOT NULL,
+    FOREIGN KEY (cart_id) REFERENCES tbcarts(id),
+    FOREIGN KEY (product_id) REFERENCES tbproducts(id)
+);
