@@ -1,0 +1,14 @@
++ A TextBox for "Name" (required, min 2 characters).
++ A TextBox for "Email" (required, must contain "@").
++ A TextBox for "Password" :
+	Validation rules:
+	Required.
+	Minimum 8 characters.
+	At least one uppercase letter.
+	At least one lowercase letter.
+	At least one digit.
+	At least one special character (e.g., !@#$%^&*).
++ A checkBox for show password 
+	if checkBox show password have been checked , the text box for password show character
+	else the text box for password show password char
+	

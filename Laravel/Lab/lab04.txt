@@ -1,0 +1,14 @@
+1. Create the Nav Link Component
+	- In resources/views/components/nav-link.blade.php, create a reusable <a> tag component.
+	- Accept attributes: $href (required, for the href attribute) and $active (required, a route pattern for active state 	checking).
+	- Use Blade's {{ $slot }} to render the link text/content.
+	- Apply the nav-link class to the <a> tag.
+	- Conditionally add the active class if the current request matches the $active pattern: {{ request()->is($active) ? 'active' : '' }}.
+2. Create the Product Card Component
+	- In resources/views/components/product-card.blade.php, create a reusable div-based card for product display.
+	- Accept attributes: $image (image URL), $title (product name), $description (product details), 
+	$price (original price as float), $newPrice (optional discounted price as float or null).
+	- Define a GET route for /b.
+	- Inside the closure, define a $products array with exactly 3 items, each an associative array
+	- Pass the array to view('b', compact('products')) and display product list using foreach loop.
+	- Name the route: ->name('b').

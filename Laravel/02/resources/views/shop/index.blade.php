@@ -9,15 +9,15 @@
 
 <header>
     <h1>E-Shop</h1>
-    <header>
-        <h1>E-Shop</h1>
+ 
+       
         <nav>
             <a href="{{route('home')}}">Home</a>
             <a href="{{route('about')}}">About</a>
             <a href="{{route('contact')}}">Contact</a>
             <a href="{{route('shop')}}">Shop</a>
         </nav>
-    </header>
+   
 </header>
 
 <div class="shop-container">

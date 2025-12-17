@@ -1,26 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace lab_08
 {
     public partial class Form1 : Form
     {
-        Form2 f2;
-
         public Form1()
         {
             InitializeComponent();
-            f2 = new Form2(this); // send Form1 instance to Form2
         }
 
-     
-
-        private void btnShowForm2_Click_1(object sender, EventArgs e)
+        private void button_load_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            f2.Show();
+           openFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox.Text = System.IO.File.ReadAllText(openFileDialog1.FileName);
+            }
+        }
+
+        public void saveText()
+        {
+
+        }
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialog1.FileName;
+                System.IO.File.WriteAllText(fileName, textBox.Text);
+            }
         }
     }
 }

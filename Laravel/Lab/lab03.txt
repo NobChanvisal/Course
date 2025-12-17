@@ -1,0 +1,27 @@
+Lab 3 .
+1. Passing Data with Associative Array
+	- Define a GET route for /a.
+	- Inside the closure, define variables: $name = 'John Doe';$age = 30; $gender = 'male';.
+	- Pass these variables to the 'welcome' view using an associative array in the view() helper (e.g., ['name' => 		$name, ...]).
+	-Create welcome.blade.php: to receives and Display name, age, and gender (e.g., "Hello, {{ $name }}! You are 		{{ $age }} years old and {{ $gender }}.").
+2. Passing Data with compact()
+	- Define a GET route for /b.
+	- Inside the closure, define variables: $name = 'Jane Smith';, $age = 25;, $gender = 'female';.
+	- Pass these variables to the 'welcome2' view using the compact() function.
+	- Create welcome2.blade.php: to receives and Display data like the exercise 1.
+3. Passing an Array with compact()
+	- Define a GET route for /c.
+	- Inside the closure, define an array $list = ['Laravel', 'Django', 'Spring Boot', 'Express.js', 'Ruby on Rails'];.
+	- Pass this array to the 'welcome3' view using compact().
+	- Create welcome3.blade.php: to display the list items in an HTML unordered list (<ul><li>...</li></ul>).
+4. Passing an Array of Associative Arrays (Objects) with compact()
+	- Define a GET route for /d.
+	- array containing at least 4 items, each as an associative array with keys: id (integer), name (string), price 	(integer), and image (URL string). 
+	- Pass the $products array to the welcome4 view using compact('products').
+	- Create welcome4.blade.php: to display product list with a css flexbox or grid layout.
+5. Filtered Data with Route Parameter
+	- Define a GET route for /e/{searchid} that accepts a required parameter $searchid (integer).
+	- Reuse the same $products array from exercise 4. 
+	- Pass both $products and $searchid to the welcome5 view using compact('products', 'searchid').
+	- Create welcome5.blade.php, loop through $products and display only the product where id matches $searchid 	(e.g., in a card layout with image, name, and price). If no match, show a "Product not found" message.
+	- Test with URLs like /e/1, /e/3, etc.	

@@ -1,0 +1,32 @@
++ Lab 1 :
+	- Text box
+	- Label
+	- Button
+	- Click event
++ Lab 2 :
+	- NumericUpDown
+	- Combobox
++ Lab 3 :
+	- RadioButton
+	- GroupBox
+	- ListBox
++ Lab 4 : 
+	- CheckBox
+	- CheckListBox
++ Lab 5: 
+	- TableLayoutPanel
+	- Get current date time
+	- Open new form
+	- Passing data from form 1 to another form
+	- SelectedIndexChanged event, ValueChanged event
++ Lab 6: Error provider
++ Lab 7: 
+	- PictureBox
+	- TabControl
++ Lab 8: 
+	- OpenFileDialog
+	- SaveFileDialog
++ Lab 9:
+	- MenuStrip
+	- StatusStrip
+

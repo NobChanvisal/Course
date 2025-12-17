@@ -1,0 +1,12 @@
+D:\learn Code\Course\Csharp\Episode-07\lab_11\bin\Debug\lab_11.exe.config
+D:\learn Code\Course\Csharp\Episode-07\lab_11\bin\Debug\lab_11.exe
+D:\learn Code\Course\Csharp\Episode-07\lab_11\bin\Debug\lab_11.pdb
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.csproj.AssemblyReference.cache
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.MDIParent1.resources
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.Properties.Resources.resources
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.csproj.GenerateResource.cache
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.csproj.CoreCompileInputs.cache
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.exe
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.pdb
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.Form1.resources
+D:\learn Code\Course\Csharp\Episode-07\lab_11\obj\Debug\lab_11.Form2.resources

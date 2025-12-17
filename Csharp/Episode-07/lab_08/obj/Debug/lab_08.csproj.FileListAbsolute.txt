@@ -8,4 +8,3 @@ D:\learn Code\Course\Csharp\Episode-07\lab_08\obj\Debug\lab_08.csproj.GenerateRe
 D:\learn Code\Course\Csharp\Episode-07\lab_08\obj\Debug\lab_08.csproj.CoreCompileInputs.cache
 D:\learn Code\Course\Csharp\Episode-07\lab_08\obj\Debug\lab_08.exe
 D:\learn Code\Course\Csharp\Episode-07\lab_08\obj\Debug\lab_08.pdb
-D:\learn Code\Course\Csharp\Episode-07\lab_08\obj\Debug\lab_08.Form2.resources

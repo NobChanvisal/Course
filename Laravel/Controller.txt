@@ -1,0 +1,5 @@
+
+- running the following command to create controller :
+	php artisan make:controller ControllernameController
+- routes to a controller with a single line for create, read, update and delete . (CRUD)
+	php artisan make:controller ControllernameController --resource
