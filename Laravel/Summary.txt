@@ -1,0 +1,32 @@
++ controller
+- running the following command to create controller :
+	php artisan make:controller ControllernameController
+	
+- routes to a controller with a single line for create, read, update and delete . (CRUD)
+	php artisan make:controller ControllernameController --resource
+
++ migration
+- Creates a new migration file in the database/migrations directory.
+	php artisan make:migration <name>
+
+- Run all pending migrations.
+	php artisan migrate
+
+- Undo the last migration batch by running their down() methods.
+	php artisan migrate:rollback
+
+- Undo all migrations.
+	php artisan migrate:reset	
+
+- Drops all tables from the database and then runs the migrate command.
+	php artisan migrate:fresh
+
+- Displays the status of each migration, indicating which have been applied.
+	php artisan migrate:status
+
++ model
+- creating a model	
+	php artisan make:model <name>
+- create model and resource controller
+	php artisan make:model <name> -cr
+

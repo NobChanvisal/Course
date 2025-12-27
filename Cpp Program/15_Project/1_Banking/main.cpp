@@ -27,14 +27,13 @@ string getDate();
 int getLastInvoiceId() {
     ifstream file("Invoice.txt", ios::binary);
     if (!file.is_open()) {
-        // If file doesn't exist or can't be opened, return 0
         return 0;
     }
 
     Invoice temp;
     int lastId = 0;
     while (file.read((char*)&temp, sizeof(Invoice))) {
-        lastId = temp.invoiceId;  // Keep updating the lastId as you read
+        lastId = temp.invoiceId;  
     }
 
     file.close();
