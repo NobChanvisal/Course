@@ -1,9 +1,9 @@
 + controller
 - running the following command to create controller :
-	php artisan make:controller ControllernameController
+	php artisan make:controller <name>Controller
 	
 - routes to a controller with a single line for create, read, update and delete . (CRUD)
-	php artisan make:controller ControllernameController --resource
+	php artisan make:controller <name>Controller --resource
 
 + migration
 - Creates a new migration file in the database/migrations directory.
@@ -30,3 +30,6 @@
 - create model and resource controller
 	php artisan make:model <name> -cr
 
++ Factories
+- create Factories
+	php artisan make:factory <name>Factory --model=<name>

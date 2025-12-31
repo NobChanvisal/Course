@@ -1,0 +1,9 @@
+1. Route
+2. Views
+3. Passing data from route to views
+4. Components
+5. include and layouts
+6. Controllers
+7. Migration
+8. Models and CRUD
+9. Factories, seeders and pagination
