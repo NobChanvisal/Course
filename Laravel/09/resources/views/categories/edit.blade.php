@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h1 class=" mb-5 text-3xl">Edit Categories</h1>
+    <x-alert/>
     <form action="{{ route('categories.update', $category->id) }}" method="POST" class="w-full max-w-lg">
         @csrf
         @method('PUT')
@@ -27,4 +28,6 @@
                 Update Category
             </button>
         </div>
+    </form>
+    <a class=" my-4 block" href="{{route('categories.index')}}">Back to categories</a>
 @endsection

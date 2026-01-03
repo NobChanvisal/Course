@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-
+    
     <x-alert/>
     
     <h1 class=" mb-5 text-3xl">Add New product</h1>
-    <form action="{{ route('products.store') }}" method="POST">
+    <form action="{{ route('products.store') }}" enctype="multipart/form-data" method="POST"  >
         @csrf
-        <table>
+        <table border="1" cellpadding="4" >
             <tr>
                 <th class=" border px-4 py-2 text-start">Name</th>
                 <td class=" border px-4 py-2">
@@ -39,13 +39,21 @@
             <tr>
                 <th class=" border px-4 py-2 text-start">status</th>
                 <td class=" border px-4 py-2">
-                    <input type="checkbox" value="1" name="status" checked >
+                    <input class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft"
+                    type="checkbox" value="1" name="status" checked >
+                    <span class="ms-2 text-sm font-medium">Available</span>
                 </td>
             </tr>
             <tr>
                 <th class=" border px-4 py-2 text-start">Description</th>
                 <td class=" border px-4 py-2">
                     <textarea class=" border w-full border-gray-300 p-1" name="description" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th class=" border px-4 py-2">Image</th>
+                <td class=" border px-4 py-2">
+                    <input type="file" name="image" id="">
                 </td>
             </tr>
             <tr>

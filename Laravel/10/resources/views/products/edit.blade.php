@@ -2,9 +2,8 @@
 @section('content')
 
     <x-alert/>
-    
     <h1 class=" mb-5 text-3xl">Edit product</h1>
-    <form action="{{ route('products.update',$product->id) }}" method="POST">
+    <form action="{{ route('products.update',$product->id) }}" enctype="multipart/form-data" method="POST" >
         @csrf
         @method('PUT')
         <table>
@@ -53,6 +52,19 @@
                     <textarea class=" border w-full border-gray-300 p-1" name="description" id="" cols="30" rows="10">
                         {{$product->description}}
                     </textarea>
+                </td>
+            </tr>
+            <tr>
+                <th class=" border px-4 py-2">
+                    Image
+                </th>
+                <td class=" border px-4 py-2">
+                    <input
+                        class="p-1"
+                        id="image" name="image" type="file">
+                    <div class="mt-4">
+                        <img class=" w-32 h-32 object-cover rounded-sm border" width="120" src="{{ asset('images/products/'.$product->image) }}" alt="{{ $category->name }}">
+                    </div>
                 </td>
             </tr>
             <tr>

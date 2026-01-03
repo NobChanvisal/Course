@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('price', 8, 2)->default(0.00);
             $table->decimal('discounted_price', 8, 2)->nullable();
             $table->enum('status', ['available', 'unavailable'])->default('available');
+            
             $table->timestamps();
         });
     }

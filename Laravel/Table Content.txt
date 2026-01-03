@@ -5,5 +5,7 @@
 5. include and layouts
 6. Controllers
 7. Migration
-8. Models and CRUD
-9. Factories, seeders and pagination
+8. Models , factories, seeders and pagination
+9. Basic CRUD
+10. Image uploads
+11. One-to-One relationship

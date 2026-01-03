@@ -2,7 +2,6 @@
 @section('content')
 
     <x-alert/>
-    
     <h1 class=" mb-5 text-3xl">Add New product</h1>
     <form action="{{ route('products.store') }}" method="POST">
         @csrf
@@ -55,4 +54,6 @@
             </tr>
         </table>
     </form>
+    <a class=" my-4 block" href="{{route('products.index')}}">Back to products</a>
+
 @endsection

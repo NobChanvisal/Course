@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h1 class=" mb-5 text-3xl">Add New Categories</h1>
+    <x-alert/>
     <form action="{{ route('categories.store') }}" method="POST">
         @csrf
         <table>
@@ -23,5 +24,6 @@
                     </tr>
         </table>
     </form>
+    <a class=" my-4 block" href="{{route('categories.index')}}">Back to categories</a>
 
 @endsection

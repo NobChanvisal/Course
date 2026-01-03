@@ -62,4 +62,6 @@
             </tr>
         </table>
     </form>
+    <a class=" my-4 block" href="{{route('products.index')}}">Back to products</a>
+
 @endsection

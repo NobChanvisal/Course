@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <h1 class=" mb-5 text-3xl">Categories</h1>
+        <a class=" text-blue-500 my-5 block underline" href="{{route('categories.create')}}">add new category</a>
 
         <x-alert/>
         @if (!$categories->count())
-            <p class=" mb-4">No categories found.</p>
+            <p class="">No categories found.</p>
         @else
-            <table class=" w-full">
+            <table>
                 <thead>
                     <tr>
                         <th class=" border px-4 py-2">ID</th>
@@ -18,17 +19,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="6" class=" border px-4 py-2 text-center">
-                            <a class=" text-blue-500" href="{{route('categories.create')}}">add new category</a>
-                        </td>
-                    </tr>
                     @foreach ($categories as $category)
                         <tr>
                             <td class=" border px-4 py-2">{{ $category->id }}</td>
                             <td class=" border px-4 py-2">{{ $category->name }}</td>
                             <td class=" border px-4 py-2">{{ $category->description }}</td> 
-                            <td class=" border px-4 py-2 text-nowrap">{{ $category->updated_at->format('d-M-Y') }}</td>
+                            <td class=" border px-4 py-2 text-nowrap">{{ $category->created_at->format('d-M-Y') }}</td>
                             <td class=" border px-4 py-2">
                                 <a class=" text-blue-500" href="{{ route('categories.edit', $category->id) }}">Edit</a>
                             </td>
@@ -45,7 +41,6 @@
                     
                 </tbody>
             </table>
-            <p class=" my-4">Total Categories : <b>{{ $categories->count() }}</b> </p>
         @endif
 
 @endsection
