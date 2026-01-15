@@ -1,0 +1,77 @@
+Tables
++ table categories
+	- id (PK)
+	- name
++ table authors 
+	- id (PK)
+	- name
++ table news
+	- id
+	- category_id (FK)
+	- authors_id (FK)
+	- title
+	- description
+	- status ENUM('public', 'unpublic')
+	- thumbnail
++ table article 
+	- id (PK)
+	- news_id (FK)
+	- content
++table ImageOfArticle
+	- id (PK)
+	-article_id (FK)
+
+Relationship
++ Category with News ( one-to-many )
+	- one category has many news
+	- news belongs to one category
++ Author and News ( one-to-many or many-to-many ) if use many to many should be have linking table.
+	- one author writes many news
+	- news belongs to one author
++ News and Article ( one-to-many )
+	- one news has one or many articles
+	- articles belongs to one news
++ Article and ImageOfArticle
+	- One article has many images
+	- Image belongs to one article
+
+Commonly Used Faker Methods in Laravel
+Below is a selection of commonly used methods in Laravel factories and seeders: 
+Person & Contact
+$faker->name – Generates a full name.
+$faker->firstName – Generates a first name.
+$faker->lastName – Generates a last name.
+$faker->title – Generates a title (e.g., 'Mr.', 'Mrs.').
+$faker->email – Generates an email address.
+$faker->unique()->safeEmail – Generates a unique, safe email address.
+$faker->phoneNumber – Generates a phone number. 
+Address & Location
+$faker->address – Generates a full address.
+$faker->streetAddress – Generates a street address.
+$faker->city – Generates a city name.
+$faker->postcode – Generates a postal code.
+$faker->country – Generates a country name.
+$faker->latitude, $faker->longitude – Generates geographical coordinates. 
+Text & Lorem Ipsum
+$faker->word – Generates a single word.
+$faker->words(3, true) – Generates an array of words, or a string if the second argument is true.
+$faker->sentence – Generates a random sentence.
+$faker->paragraph – Generates a random paragraph.
+$faker->text – Generates a larger block of text. 
+Numbers & Dates
+$faker->randomDigit – Generates a single random digit (0-9).
+$faker->randomNumber(5) – Generates a random number with a specific number of digits.
+$faker->numberBetween(1, 100) – Generates a number within a specified range.
+$faker->randomFloat(2, 0, 100) – Generates a random float with specified decimal places and range.
+$faker->date() – Generates a date string.
+$faker->dateTime() – Generates a DateTime object.
+$faker->year – Generates a year. 
+Internet & Miscellaneous
+$faker->userName – Generates a username.
+$faker->password – Generates a random password.
+$faker->domainName – Generates a domain name.
+$faker->url – Generates a URL.
+$faker->imageUrl() – Generates a URL for a placeholder image.
+$faker->uuid – Generates a UUID.
+$faker->boolean – Generates true or false.
+$faker->randomElement(['seller', 'buyer']) – Selects a random value from a provided array. 

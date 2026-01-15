@@ -11,11 +11,8 @@
     <main>
         <div class=" fixed top-0 bottom-0 p-4 pt-20 w-52 flex flex-col gap-2.5 shadow-md bg-white">
             <x-nav-link route="dashboard" active="dashboard">Dashboard</x-nav-link>
-            <x-nav-link route="categories.index" active="categories.*">
-                Categories
-            </x-nav-link>
-            <x-nav-link route="products.index" active="products.*">
-                Products
+            <x-nav-link route="users.index" active="users.*">
+                Users
             </x-nav-link>
         </div>
         <section class=" ml-52 p-14">

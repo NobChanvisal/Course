@@ -1,6 +1,5 @@
-@extends('layout.defualt')
+@extends('layout.defualt',['title' => 'Product'])
 
-@section('title', 'Product Page')
 @section('content')
     <h1 class="text-3xl font-bold">
         This is the product page.

@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{577FE8C4-96A1-41C6-BA95-E76B96D67F8D}|Class_Object.csproj|solutionrelative:bankingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{577FE8C4-96A1-41C6-BA95-E76B96D67F8D}|Class_Object.csproj|d:\\learn code\\course\\csharp\\episode-05\\class_object\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{577FE8C4-96A1-41C6-BA95-E76B96D67F8D}|Class_Object.csproj|D:\\learn Code\\Course\\Csharp\\Episode-05\\Class_Object\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{577FE8C4-96A1-41C6-BA95-E76B96D67F8D}|Class_Object.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -30,8 +34,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAywDcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T09:33:08.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:33:08.288Z"
             },
             {
               "$type": "Document",
@@ -41,7 +44,7 @@
               "RelativeDocumentMoniker": "BankingSystem.cs",
               "ToolTip": "D:\\learn Code\\Course\\Csharp\\Episode-05\\Class_Object\\BankingSystem.cs",
               "RelativeToolTip": "BankingSystem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAfAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAIBAwBgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T09:34:20.58Z",
               "EditorCaption": ""

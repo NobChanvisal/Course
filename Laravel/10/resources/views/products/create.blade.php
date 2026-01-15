@@ -1,12 +1,11 @@
 @extends('layouts.app')
 @section('content')
-    
+
     <x-alert/>
-    
     <h1 class=" mb-5 text-3xl">Add New product</h1>
-    <form action="{{ route('products.store') }}" enctype="multipart/form-data" method="POST"  >
+    <form action="{{ route('products.store') }}" enctype="multipart/form-data" method="POST">
         @csrf
-        <table border="1" cellpadding="4" >
+        <table>
             <tr>
                 <th class=" border px-4 py-2 text-start">Name</th>
                 <td class=" border px-4 py-2">
@@ -39,9 +38,7 @@
             <tr>
                 <th class=" border px-4 py-2 text-start">status</th>
                 <td class=" border px-4 py-2">
-                    <input class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft"
-                    type="checkbox" value="1" name="status" checked >
-                    <span class="ms-2 text-sm font-medium">Available</span>
+                    <input type="checkbox" value="1" name="status" checked >
                 </td>
             </tr>
             <tr>
@@ -51,16 +48,12 @@
                 </td>
             </tr>
             <tr>
-                <th class=" border px-4 py-2">Image</th>
-                <td class=" border px-4 py-2">
-                    <input type="file" name="image" id="">
-                </td>
-            </tr>
-            <tr>
                 <td colspan="4" class=" border px-4 py-2 text-center">          
                     <button type="submit" class=" text-white border py-1 px-10 bg-blue-600 hover:bg-blue-700" >add</button>
                 </td>
             </tr>
         </table>
     </form>
+    <a class=" my-4 block" href="{{route('products.index')}}">Back to products</a>
+
 @endsection

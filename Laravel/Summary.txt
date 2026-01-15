@@ -33,3 +33,10 @@
 + Factories
 - create Factories
 	php artisan make:factory <name>Factory --model=<name>
+
++ Seeder
+	php artisan db:seed
+	
++ Auth using Breeze
+	composer require laravel/breeze --dev
+	php artisan breeze:install

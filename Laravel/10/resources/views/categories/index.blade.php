@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <h1 class=" mb-5 text-3xl">Categories</h1>
+        <a class=" text-blue-500 my-5 block underline" href="{{route('categories.create')}}">add new category</a>
 
         <x-alert/>
-        <a class=" text-blue-500 underline block my-4" href="{{route('categories.create')}}">add new category</a>
         @if (!$categories->count())
             <p class="">No categories found.</p>
         @else
-            <table class=" w-full" border="1">
+            <table class=" w-full">
                 <thead>
                     <tr>
                         <th class=" border px-4 py-2">ID</th>
@@ -23,9 +23,10 @@
                         <tr>
                             <td class=" border px-4 py-2">{{ $category->id }}</td>
                             <td class=" border px-4 py-2">
-                                <div class=" flex gap-2">
-                                    <img class=" w-20 h-20 object-cover rounded-sm border " src="{{ $category->image ? asset('images/category/'.$category->image) : asset('images/no image.jpg') }}"  alt="{{$category->name}}" >
-                                    <p>{{ $category->name }}</p>
+                                <div>
+                                    <img class=" inline-block w-8 h-8 mr-2 rounded-full object-cover" 
+                                        src="{{ $category->image != null ? $category->image : asset('images/no image.jpg') }}" alt="{{ $category->name }}">
+                                    {{ $category->name }}
                                 </div>
                             </td>
                             <td class=" border px-4 py-2">{{ $category->description }}</td> 
@@ -43,6 +44,7 @@
                             </td>
                         </tr>
                     @endforeach
+                    
                 </tbody>
             </table>
         @endif

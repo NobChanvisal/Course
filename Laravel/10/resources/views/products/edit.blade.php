@@ -2,8 +2,9 @@
 @section('content')
 
     <x-alert/>
+    
     <h1 class=" mb-5 text-3xl">Edit product</h1>
-    <form action="{{ route('products.update',$product->id) }}" enctype="multipart/form-data" method="POST" >
+    <form action="{{ route('products.update',$product->id) }}" enctype="multipart/form-data" method="POST">
         @csrf
         @method('PUT')
         <table>
@@ -55,23 +56,12 @@
                 </td>
             </tr>
             <tr>
-                <th class=" border px-4 py-2">
-                    Image
-                </th>
-                <td class=" border px-4 py-2">
-                    <input
-                        class="p-1"
-                        id="image" name="image" type="file">
-                    <div class="mt-4">
-                        <img class=" w-32 h-32 object-cover rounded-sm border" width="120" src="{{ asset('images/products/'.$product->image) }}" alt="{{ $category->name }}">
-                    </div>
-                </td>
-            </tr>
-            <tr>
                 <td colspan="4" class=" border px-4 py-2 text-center">          
                     <button type="submit" class=" text-white border py-1 px-10 bg-blue-600 hover:bg-blue-700" >update</button>
                 </td>
             </tr>
         </table>
     </form>
+    <a class=" my-4 block" href="{{route('products.index')}}">Back to products</a>
+
 @endsection

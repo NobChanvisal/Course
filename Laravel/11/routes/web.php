@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProductsController;
-use App\Models\categories;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/', function () {
+    return view('dashboard');
+})->name('dashboard');
 
-Route::resource('categories', CategoriesController::class);
-Route::resource('products', ProductsController::class);
+Route::resource('profile', ProfileController::class);
+Route::resource('users', UserController::class); 

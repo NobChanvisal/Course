@@ -9,3 +9,6 @@
 9. Basic CRUD
 10. Image uploads
 11. One-to-One relationship
+12. One-to-Many relationship
+13. Many-to-Many relationship
+14. Breeze Authentication
