@@ -1,0 +1,18 @@
+lab 08. Models and factory
+
+1. Create a new Laravel project Lab_08
+2. Create Database name lab_08 and Configure your database in .env at laravel.
+3. Run initial migrations to ensure your setup works using : php artisan migrate
+4. Create Migration or copy from lab_07
+    - categories table
+	- products table
+5. Create Models and Add the HasFactory trait to each model
+    - Categories
+    - Products
+6. Create factory 
+    - CategoriesFactory
+    - ProductsFactory
+7. Open file DatabaseSeeder.php to update the code
+
+		
+		

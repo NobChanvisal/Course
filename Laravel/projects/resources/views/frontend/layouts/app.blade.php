@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+        <title>@yield('title')</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net" />
+        <link
+            href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
 <body> 
-    <header class=" container mx-auto px-6 py-6 bg-white flex items-center justify-between fixed z-30">
+    @php
+        $cart = \App\Models\Carts::withCount('cartItems')
+                ->where('user_id', Auth::id())
+                ->first();
+
+        $cartCount = $cart?->cart_items_count ?? 0;
+
+    @endphp
+    <header class=" w-full px-12 py-6 bg-white flex items-center justify-between fixed z-30">
         <div>
             logo
         </div>
         <div>
-            <nav class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-600">
+            <nav class="flex md:flex-row md:space-x-10 items-center text-sm font-medium text-gray-600">
                 <x-front-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                 </x-front-nav-link>
-                <x-front-nav-link :href="route('shop')" :active="request()->routeIs('shop*')">
+                <x-front-nav-link :href="route('shop')" :active="request()->is('shop*')">
                         {{ __('Shops') }}
                 </x-front-nav-link>
                 <x-front-nav-link :href="route('about')" :active="request()->routeIs('about')">
@@ -37,13 +55,49 @@
 
                 </button>
                 <div class="relative">
-                    <button class="text-gray-600 hover:text-gray-900 transition-colors">
+                    <a href="{{Auth::check() ? route('cart', Auth::user()->id) : route('login')}}" class="text-gray-600 hover:text-gray-900 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
-                    </button>
-                    <span class="absolute -top-2 -right-2 bg-rose-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+                    </a>
+                    @if($cartCount > 0)
+                        <span class="absolute -top-0 -right-0 bg-rose-500 text-white
+                                    text-[10px] w-2.5 h-2.5 rounded-full flex items-center
+                                    justify-center font-bold">
+                        </span>
+                    @endif
                 </div>
+                {{-- logout --}}
+                @auth
+                    <div class="hidden sm:flex sm:items-center sm:ms-6">
+                        <x-dropdown align="right" width="48">
+                            <x-slot name="trigger">
+                                <button class=" uppercase border text-gray-600 hover:text-gray-900 transition-colors bg-gray-100 inline-flex items-center justify-center w-7 h-7 text-sm overflow-hidden rounded-full">
+                                        <span class="font-medium text-body">{{ Str::substr(Auth::user()->name, 0, 1) }}</span>
+                                </button>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <x-dropdown-link :href="route('profile.edit')">
+                                    {{ __('Profile') }}
+                                </x-dropdown-link>
+
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-dropdown-link :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                @else
+                    <a href="{{route('login')}}" class="text-gray-600 hover:text-gray-900 transition-colors">Login</a>
+                @endauth
                 <button class="md:hidden text-gray-600">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -52,7 +106,7 @@
                 </button>
             </div>
     </header>
-    <main class=" pt-16">
+    <main class=" pt-20">
         @yield('content')
     </main>
     <footer class="bg-neutral-primary-soft mt-12 px-12">
@@ -129,5 +183,10 @@
         </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
 </body>
 </html>
