@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+    margin: 0 2px;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid darkgray;
+    color: black;
+}
+.active{
+    background-color: rgb(57, 71, 195);
+    color: white;
+    border: 1px solid rgb(57, 71, 195);
+}

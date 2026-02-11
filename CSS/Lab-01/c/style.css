@@ -1,0 +1,27 @@
+img{
+    width: 300px;
+}
+.price{
+    color: green;
+}
+button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.add-button{
+    background-color: rgb(255, 216, 20);
+    color: black;
+}
+.add-button:hover{
+    background-color: rgb(255, 216, 20,0.8);
+}
+.buy-button{
+    background-color: rgb(255, 164, 28);
+    color: black
+}
+.buy-button:hover{
+    background-color: rgb(255, 164, 28,0.8);
+}

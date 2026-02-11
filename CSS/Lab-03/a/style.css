@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    margin: 30px;
+    width: 400px;
+    border: 1px solid gray;
+    padding: 15px;
+    text-align: justify;
+}
+small{
+    text-transform: uppercase;
+    color: slategray;
+}
+p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+span{
+    color: steelblue;
+}

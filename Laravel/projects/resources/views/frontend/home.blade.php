@@ -28,7 +28,7 @@
         <div class=" flex flex-wrap gap-5">
             @foreach ($categories as $item)
                 <a class=" w-32 shadow" href="{{route('shop', ['category_slug' => $item->slug])}}">
-                    <img class=" w-full h-32 object-cover" src="{{$item->image }}" alt="">
+                    <img class=" w-full h-32 object-cover" src="{{ asset('images/categories/' . $item->image) }}" alt="">
                     <p class="text-center p-1">{{$item->name}}</p>
                 </a>
             @endforeach
@@ -43,7 +43,7 @@
         <div class="grid grid-cols-5 gap-6">
             @foreach ($products as $item)
                 <a class=" w-full" href="{{route('product.show', ['category_slug' => $item->categories->slug, 'pro_slug' => $item->slug])}}">
-                    <img class=" w-full h-60 object-cover" src="{{$item->image }}" alt="">
+                    <img class=" w-full h-60 object-cover" src="{{ asset('images/products/' . $item->image) }}" alt="">
                     <div class="p-1">
                         <p class=" text-sm text-slate-700">{{$item->categories->name}}</p>
                         <p class="mb-1 text-base">{{$item->name}}</p>

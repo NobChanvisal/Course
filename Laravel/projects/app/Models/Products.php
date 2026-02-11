@@ -12,6 +12,7 @@ class Products extends Model
         'name',
         'slug',
         'price',
+        'price_type',
         'discounted_price',
         'category_id',
         'status',

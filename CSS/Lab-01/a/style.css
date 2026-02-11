@@ -1,0 +1,22 @@
+.subscribe-button{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.add-button{
+    width: 200px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+.dowload-button{
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color: slategrey;
+    border: 1px solid slategrey;
+}

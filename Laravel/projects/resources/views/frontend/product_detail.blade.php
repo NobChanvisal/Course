@@ -3,7 +3,7 @@
 @section('title', 'Product Details - ' . $product->name)
 
 @section('content')
-<main class="max-w-6xl mx-auto px-4 py-12 pt-24">
+<main class="max-w-6xl mx-auto px-4 py-12">
 
     <form action="{{ route('cart.add') }}" method="POST">
         @csrf
@@ -16,7 +16,7 @@
 
             <!-- IMAGE -->
             <div class="bg-gray-50 flex items-center justify-center aspect-square rounded-sm overflow-hidden">
-                <img src="{{ asset($product->image) }}"
+                <img src="{{ asset('images/products/' . $product->image) }}"
                      alt="{{ $product->name }}"
                      class="max-w-[80%] h-auto object-contain mix-blend-multiply">
             </div>

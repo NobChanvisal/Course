@@ -2,7 +2,9 @@
 @section('content')
     <h1 class=" mb-5 text-3xl">Add New Categories</h1>
     <x-alert/>
-    <form action="{{ route('categories.store') }}" enctype="multipart/form-data" method="POST">
+    <form  method="POST"
+      action="{{ route('admin.products.store') }}"
+      enctype="multipart/form-data">
         @csrf
         <table>
             <tr>

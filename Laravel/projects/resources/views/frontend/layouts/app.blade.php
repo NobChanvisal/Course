@@ -69,35 +69,49 @@
                 </div>
                 {{-- logout --}}
                 @auth
-                    <div class="hidden sm:flex sm:items-center sm:ms-6">
-                        <x-dropdown align="right" width="48">
-                            <x-slot name="trigger">
-                                <button class=" uppercase border text-gray-600 hover:text-gray-900 transition-colors bg-gray-100 inline-flex items-center justify-center w-7 h-7 text-sm overflow-hidden rounded-full">
-                                        <span class="font-medium text-body">{{ Str::substr(Auth::user()->name, 0, 1) }}</span>
-                                </button>
-                            </x-slot>
+                    @if(Auth::user()->role !== 'admin')
+                        {{-- NORMAL USER --}}
+                        <div class="hidden sm:flex sm:items-center sm:ms-6">
+                            <x-dropdown align="right" width="48">
+                                <x-slot name="trigger">
+                                    <button
+                                        class="uppercase border text-gray-600 hover:text-gray-900 transition-colors bg-gray-100 inline-flex items-center justify-center w-7 h-7 text-sm overflow-hidden rounded-full">
+                                        <span class="font-medium text-body">
+                                            {{ Str::substr(Auth::user()->name, 0, 1) }}
+                                        </span>
+                                    </button>
+                                </x-slot>
 
-                            <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
-                                    {{ __('Profile') }}
-                                </x-dropdown-link>
-
-                                <!-- Authentication -->
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-
-                                    <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
-                                                        this.closest('form').submit();">
-                                        {{ __('Log Out') }}
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="route('profile.edit')">
+                                        {{ __('Profile') }}
                                     </x-dropdown-link>
-                                </form>
-                            </x-slot>
-                        </x-dropdown>
-                    </div>
+
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <x-dropdown-link
+                                            :href="route('logout')"
+                                            onclick="event.preventDefault(); this.closest('form').submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </form>
+                                </x-slot>
+                            </x-dropdown>
+                        </div>
+                    @else
+                        <a href="{{ route('login') }}"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">
+                            Login
+                        </a>
+                    @endif
                 @else
-                    <a href="{{route('login')}}" class="text-gray-600 hover:text-gray-900 transition-colors">Login</a>
+                    {{-- GUEST --}}
+                    <a href="{{ route('login') }}"
+                    class="text-gray-600 hover:text-gray-900 transition-colors">
+                        Login
+                    </a>
                 @endauth
+
                 <button class="md:hidden text-gray-600">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -106,7 +120,7 @@
                 </button>
             </div>
     </header>
-    <main class=" pt-20">
+    <main class=" pt-20 dark:bg-gray-900">
         @yield('content')
     </main>
     <footer class="bg-neutral-primary-soft mt-12 px-12">

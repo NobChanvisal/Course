@@ -5,7 +5,7 @@
 @section('content')
     <div class="container mx-auto px-14">
         @if (!$carts || $carts->cartItems->isEmpty())
-            <p class=" text-center text-gray-600">Your cart is empty.</p>
+            <p class=" text-center text-gray-600 dark:text-white">Your cart is empty.</p>
         @else
            
             <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -22,8 +22,8 @@
                                 class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                                 <a href="#" class="shrink-0 md:order-1">
                                     <img
-                                        class="h-20 w-20 object-cover dark:hidden"
-                                        src="{{ $item->product->image }}"
+                                        class="h-20 w-20 object-cover"
+                                        src="{{ asset('images/products/' . $item->product->image) }}"
                                         alt="imac image"
                                     />
                                 </a>
@@ -31,7 +31,7 @@
                                 <div
                                     class="flex items-center justify-between md:order-3 md:justify-end">
                                     <div class="flex items-center">
-                                        <p>Quantity:</p>
+                                        <p class=" dark:text-white">Quantity:</p>
                                         <p
                                          class="ms-2 rounded border border-gray-300 bg-gray-50 px-2 py-1 text-center text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 " >
                                             {{ $item->quantity }}
@@ -150,7 +150,7 @@
 
                     <div class="flex items-center justify-center gap-2">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
-                        <a href="{{route('shop')}}" title="" class="inline-flex items-center gap-2 text-sm font-medium text-blue-700 underline hover:no-underline dark:text-blue-500">
+                        <a href="{{route('shop')}}" title="" class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 underline hover:no-underline dark:text-white">
                         Continue Shopping
                         <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />

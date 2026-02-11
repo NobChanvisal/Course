@@ -12,35 +12,19 @@ use App\Http\Controllers\CheckoutController;
 
 // Frontend Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
 Route::get('/shop/{category_slug?}', [ProductsController::class, 'index'])
     ->name('shop');
-
 Route::get('/shop/{category_slug}/{pro_slug}', [ProductsController::class, 'show'])
     ->name('product.show');
-
 Route::view('/about', 'frontend.about')->name('about');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'is_user'])->group(function () {
     Route::get('/cart/{user_id}', [CartController::class, 'index'])->name('cart');
     Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
     Route::delete('/cart/remove/{cart_item_id}', [CartController::class, 'remove'])->name('cart.remove');
     Route::get('/checkout', [CheckoutController::class, 'index']);
 });
 
-// Admin Routes
-Route::middleware(['auth', 'is_admin'])
-    ->prefix('admin')
-    ->name('admin.')
-    ->group(function () {
-
-        Route::get('/', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
-
-        Route::resource('categories', App\Http\Controllers\Admin\CategoriesController::class);
-        Route::resource('products', App\Http\Controllers\Admin\ProductsController::class)->names('products');
-    });
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +39,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';

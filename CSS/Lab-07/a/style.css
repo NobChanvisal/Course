@@ -1,0 +1,13 @@
+body{
+    height: 2000px;
+}
+
+.item{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: lightblue;
+    color: black;
+    margin: 20px;
+    padding: 10px;
+}

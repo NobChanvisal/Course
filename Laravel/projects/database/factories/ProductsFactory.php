@@ -20,21 +20,32 @@ class ProductsFactory extends Factory
         $name = $this->faker->unique()->words(3, true);
         $price = $this->faker->randomFloat(2, 10, 100);
 
+        $discounted_price = null;
+        $price_type = $this->faker->randomElement(['percent', 'fixed', 'none']);
+        if ($price_type === 'percent') {
+            $percent = $this->faker->numberBetween(5, 75);
+            $discounted_price = round($price - ($price * $percent / 100), 2);
+        } elseif ($price_type === 'fixed') {
+            $discounted_price = $this->faker->randomFloat(2, 1, max(1, $price - 5));
+        }
+
         return [
             'category_id' => Categories::inRandomOrder()->value('id'),
             'name' => $name,
             'slug' => Str::slug($name),
             'description' => $this->faker->paragraph(),
             'price' => $price,
-            'discounted_price' => $this->faker->randomFloat(2, 10, $price),
+            'price_type' => $price_type,
+            'discounted_price' => $discounted_price,
             'status' => $this->faker->randomElement(['available', 'unavailable']),
             'image' => $this->faker->randomElement([
-                'https://i.pinimg.com/1200x/ee/5c/c5/ee5cc5607d903c2773e42133fe65d5ac.jpg',
-                'https://i.pinimg.com/1200x/0a/d5/86/0ad5860eaa079163639dc7f91c49c864.jpg',
-                'https://i.pinimg.com/1200x/ec/c4/54/ecc454ef5af8c5cf2f835da0144fbbf4.jpg',
-                'https://i.pinimg.com/1200x/3e/da/79/3eda798fb25e5b07800af8e179754aa0.jpg',
-                'https://i.pinimg.com/1200x/86/05/00/8605000b5a1309fb6fd6c5ce58915edd.jpg',
-                'https://i.pinimg.com/1200x/a3/c6/3f/a3c63f2e5228793a7d1f777a174c5057.jpg'
+                '01.jpg',
+                '02.jpg',
+                '03.jpg',
+                '04.jpg',
+                '05.jpg',
+                '06.jpg',
+                '07.jpg',
             ]),
         ];
     }

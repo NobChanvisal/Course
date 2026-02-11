@@ -22,12 +22,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
-                'name' => 'Admin',
-                'email' => 'Admin168@example.com',
-                'role' => 'admin',
-                'password' => bcrypt('Admin@123'), 
-            ]);
+        
         Banner::factory()->create([
             'title' => 'Summer Sale',
             'description' => 'Get up to 50% off on selected items during our Summer Sale!',
@@ -38,12 +33,18 @@ class DatabaseSeeder extends Seeder
 
             
         User::factory(10)->create();
-
+        User::factory()->create([
+                'name' => 'Admin',
+                'email' => 'Admin168@example.com',
+                'role' => 'admin',
+                'password' => bcrypt('Admin@123'), 
+            ]);
         User::factory()->create([
             'name' => 'dara',
             'email' => 'dara@example.com',
             'password' => bcrypt('dara@123')
         ]);
+        
         Categories::factory(5)->create();
         Products::factory(50)->create();
 

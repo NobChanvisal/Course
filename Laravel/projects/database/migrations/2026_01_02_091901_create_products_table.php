@@ -18,9 +18,10 @@ return new class extends Migration
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
             $table->string('name');
-             $table->string('slug')->unique();
+            $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->decimal('price', 8, 2)->default(0.00);
+            $table->enum('price_type', ['percent', 'fixed', 'none'])->default('none');
             $table->decimal('discounted_price', 8, 2)->nullable();
             $table->enum('status', ['available', 'unavailable'])->default('available');
             $table->string('image')->nullable();

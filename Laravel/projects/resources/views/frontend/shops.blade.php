@@ -24,7 +24,7 @@
         <div class="grid grid-cols-5 gap-6">
             @foreach ($products as $item)
                 <a class=" w-full" href="{{route('product.show', ['category_slug' => $item->categories->slug, 'pro_slug' => $item->slug])}}">
-                    <img class=" w-full h-60 object-cover" src="{{$item->image }}" alt="">
+                    <img class=" w-full h-60 object-cover" src="{{asset('images/products/' . $item->image) }}" alt="">
                     <div class="p-1">
                         <p class=" text-sm text-slate-700">{{$item->categories->name}}</p>
                         <p class="mb-1 text-base">{{$item->name}}</p>

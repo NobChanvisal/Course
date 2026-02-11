@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap');
+
+
+body{
+    width: 50%;
+}
+
+.moul-regular {
+  font-family: "Moul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.battambang-regular {
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title{
+    text-align: center;
+}
+.date{
+    text-align: right;
+}
+dt{
+    font-weight: bold;
+}
