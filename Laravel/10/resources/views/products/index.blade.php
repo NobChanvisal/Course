@@ -27,8 +27,8 @@
                         <td class=" border px-4 py-2">
                             
                                 <div>
-                                    <img class=" inline-block w-8 h-8 mr-2 rounded-full object-cover" 
-                                        src="{{ $pro->image != null ? $pro->image : asset('images/no image.jpg') }}" alt="{{ $pro->name }}">
+                                    <img class=" inline-block w-36 h-36 mr-2 rounded-full object-cover" 
+                                        src="{{ $pro->image != null ? asset('storage/'.$pro->image) : asset('storage/no image.jpg') }}" alt="{{ $pro->name }}">
                                     {{ $pro->name }}
                                 </div>
                         </td>
@@ -39,7 +39,7 @@
                         </td>
                         <td class=" border px-4 py-2">{{ $pro->description }}</td>
                         <td class=" border px-4 py-2 ">
-                            <span class=" py-1 px-3 {{ $pro->status == 'available' ? 'text-green-500 bg-green-200' : 'text-red-500 bg-red-200' }} " >
+                            <span class=" py-1 px-3 rounded-3xl capitalize {{ $pro->status == 'available' ? 'text-green-500 bg-green-200' : 'text-red-500 bg-red-200' }} " >
                                 {{$pro->status}}
                             </span>
                         </td>

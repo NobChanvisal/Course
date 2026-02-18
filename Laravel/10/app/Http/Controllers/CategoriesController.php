@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller
 {
@@ -38,11 +39,12 @@ class CategoriesController extends Controller
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        if($request->hasFile('image')){
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images/category'), $imageName);
-            $val['image'] = $imageName;
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('category', 'public');
         }
+        $val['image'] = $imagePath;
+
         Categories::create($val);
         return redirect()->route('categories.index')->with('success', 'Category created successfully.');
     }
@@ -78,19 +80,13 @@ class CategoriesController extends Controller
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        if($request->hasFile('image')){
-
-            $oldImgPath = public_path('images/category/'.$category->image);
-            
-            // Delete old image if exists
-            if(file_exists($oldImgPath)){
-                unlink($oldImgPath);
+        if ($request->hasFile('image')) {
+            if ($category->image) {
+                Storage::disk('public')->delete($category->image);
             }
 
-            // add new image
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images/category'), $imageName);
-            $val['image'] = $imageName;
+            $imagePath = $request->file('image')->store('category', 'public');
+            $val['image'] = $imagePath;
         }
 
         $category->update($val);
@@ -105,10 +101,11 @@ class CategoriesController extends Controller
         //
         $category = Categories::findOrFail($id);
         // Delete image if exists
-        $oldImgPath = public_path('images/category/'.$category->image);
-        if(file_exists($oldImgPath)){
-            unlink($oldImgPath);
-        }
+        
+            if ($category->image) {
+                Storage::disk('public')->delete($category->image);
+            }
+        
         $category->delete();
         return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
     }

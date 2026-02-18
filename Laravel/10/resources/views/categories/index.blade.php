@@ -24,8 +24,8 @@
                             <td class=" border px-4 py-2">{{ $category->id }}</td>
                             <td class=" border px-4 py-2">
                                 <div>
-                                    <img class=" inline-block w-8 h-8 mr-2 rounded-full object-cover" 
-                                        src="{{ $category->image != null ? $category->image : asset('images/no image.jpg') }}" alt="{{ $category->name }}">
+                                    <img class=" inline-block w-36 h-36 mr-2 rounded-full object-cover" 
+                                        src="{{ $category->image != null ? asset('storage/'. $category->image) : asset('storage/no image.jpg') }}" alt="{{ $category->name }}">
                                     {{ $category->name }}
                                 </div>
                             </td>

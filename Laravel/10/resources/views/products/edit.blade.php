@@ -56,6 +56,15 @@
                 </td>
             </tr>
             <tr>
+                <th>Image</th>
+                <td class=" border px-4 py-2 text-start">
+                    <label for="image">
+                        <img class=" cursor-pointer" width="100" src="{{asset('storage/'.$product->image)}}" alt="">
+                        <input name="image" id="image" type="file" class=" hidden">
+                    </label>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="4" class=" border px-4 py-2 text-center">          
                     <button type="submit" class=" text-white border py-1 px-10 bg-blue-600 hover:bg-blue-700" >update</button>
                 </td>

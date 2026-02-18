@@ -48,6 +48,12 @@
                 </td>
             </tr>
             <tr>
+                <th class="border px-4 py-2 text-start">image</th>
+                <td class="border px-4 py-2">
+                    <input type="file" name="image" id="">
+                </td>
+            </tr>
+            <tr>
                 <td colspan="4" class=" border px-4 py-2 text-center">          
                     <button type="submit" class=" text-white border py-1 px-10 bg-blue-600 hover:bg-blue-700" >add</button>
                 </td>

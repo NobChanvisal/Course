@@ -3,7 +3,7 @@
     <h1 class=" mb-5 text-3xl">Add New Categories</h1>
     <x-alert/>
     <form  method="POST"
-      action="{{ route('admin.products.store') }}"
+      action="{{ route('categories.store') }}"
       enctype="multipart/form-data">
         @csrf
         <table>
